@@ -592,4 +592,5 @@ MonoBehaviour:
   delay: 3
   BlastR: 5
   BlastF: 700
-  explosionEfect: {fileID: 0}
+  explosionEfect: {fileID: 1918793699212222, guid: b02450db1bbd6174fb77ed11da88b873,
+    type: 2}

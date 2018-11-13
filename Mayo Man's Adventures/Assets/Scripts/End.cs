@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class End : MonoBehaviour {
 
+   void Start()
+    {
+        
+    }
+
     void Update()
     {
+
+
         Destroy(gameObject, 2f);
     }
 }
