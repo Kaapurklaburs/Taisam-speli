@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Throw : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public float Force = 20f;
+    public GameObject Granade;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject granade = Instantiate(Granade, transform.position, transform.rotation);
+            Rigidbody rb = granade.GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * Force);
+        }
+    }
 }

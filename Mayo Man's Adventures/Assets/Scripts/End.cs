@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class End : MonoBehaviour {
 
+   // public GameObject explosionEfect;
+    public float LifeTime = 2f;
+
    void Start()
     {
         
@@ -11,8 +14,7 @@ public class End : MonoBehaviour {
 
     void Update()
     {
-
-
-        Destroy(gameObject, 2f);
+       // Instantiate(explosionEfect, transform.position, transform.rotation);
+        Destroy(gameObject, LifeTime);
     }
 }
