@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Granade : MonoBehaviour {
 
+    public Transform zero;
     public float delay = 3f;
     public float BlastR = 5f;
     public float BlastF = 700f;
@@ -30,7 +31,7 @@ public class Granade : MonoBehaviour {
 
     void Explode()
     {
-        Instantiate(explosionEfect, transform.position, transform.rotation);
+        Instantiate(explosionEfect, transform.position, zero.rotation);
         Collider[] colliders = Physics.OverlapSphere(transform.position, BlastR);
         foreach (Collider nearbyObject in colliders)
         {

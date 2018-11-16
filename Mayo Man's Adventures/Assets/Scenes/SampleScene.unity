@@ -528,6 +528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06f976ace6be7df49b43a77a5d14a05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   rb: {fileID: 2054534811}
-  jumpForce: 3
+  jumpForce: 5
