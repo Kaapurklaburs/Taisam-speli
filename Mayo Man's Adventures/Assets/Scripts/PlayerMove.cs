@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,10 +8,12 @@ public class PlayerMove : MonoBehaviour {
     public float speed = 10f;
     public Rigidbody rb;
     public float jumpForce;
+   // public Collider col;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+     // col = GetComponent<CapsuleCollider>();
     }
 
 
