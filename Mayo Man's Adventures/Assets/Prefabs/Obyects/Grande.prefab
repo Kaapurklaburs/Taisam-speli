@@ -112,10 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fca163d73d7189c4080803a17902ce9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zero: {fileID: 4495211538370890, guid: 224b7db26a1d0f046b35f5e67b3b5002, type: 2}
-  delay: 3
+  zero: {fileID: 4623909914925218, guid: 77ba373a10966544a93c6555c5cdede9, type: 2}
+  delay: 3.5
   BlastR: 7
-  BlastF: 700
+  BlastF: 300
   explosionEfect: {fileID: 1432749749454130, guid: b02450db1bbd6174fb77ed11da88b873,
     type: 2}
 --- !u!136 &136389645611755908
