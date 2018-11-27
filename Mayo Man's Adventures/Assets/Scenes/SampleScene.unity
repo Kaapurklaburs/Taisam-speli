@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Force: 20
-  Granade: {fileID: 1253338071462230, guid: 31312a78cddb114448c3c3e54eef5b58, type: 2}
+  Granade: {fileID: 1873139808480738, guid: 61a7f3b9e6c2b4142aca5d67ec9116b9, type: 2}
 --- !u!1 &1227591911
 GameObject:
   m_ObjectHideFlags: 0
@@ -668,7 +668,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 126
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!136 &1935446346
 CapsuleCollider:
@@ -678,7 +678,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1935446344}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
@@ -752,7 +752,7 @@ MonoBehaviour:
   player: {fileID: 2054534815}
   delay: 6
   Granade: {fileID: 1540671160586852, guid: d457739ece616594bb7f6aa42fe5869b, type: 2}
-  ForceY: 3
+  ForceY: 0
 --- !u!1001 &1962924228
 Prefab:
   m_ObjectHideFlags: 0

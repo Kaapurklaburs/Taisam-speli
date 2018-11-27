@@ -12,6 +12,8 @@ public class BotThrow : MonoBehaviour {
     private float ForceX;
     private float ForceZ;
     public float ForceY;
+    Vector3 offset1;
+    Vector3 offset2;
 
     // Use this for initialization
     void Start()
@@ -35,7 +37,29 @@ public class BotThrow : MonoBehaviour {
         off = player.position - transform.position;
         ForceX = off.x;
         ForceZ = off.z;
-        GameObject granade = Instantiate(Granade, transform.position, transform.rotation);
+
+        if (ForceX >= 0)
+        {
+            offset1.x = 0.5f;
+        }
+        else
+        {
+            offset1.x = -0.5f;
+        }
+
+        if (ForceZ >= 0)
+        {
+            offset1.z = 0.5f;
+        }
+        else
+        {
+            offset1.z = -0.5f;
+        }
+        offset1.y = transform.position.y;
+
+        offset2 = transform.position + offset1;
+
+        GameObject granade = Instantiate(Granade, offset2, transform.rotation);
         Rigidbody rb = granade.GetComponent<Rigidbody>();
         rb.AddForce(ForceX, ForceY, ForceZ, ForceMode.Impulse);
 
