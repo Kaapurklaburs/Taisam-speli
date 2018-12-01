@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Start Menu.unity
     guid: 48359411da6ac9344aed6978a9e3d861
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/StoryMode.unity
+    guid: 3600bfa44d18caa49bfba9150947efa8
+  - enabled: 1
+    path: Assets/Scenes/InBrake.unity
+    guid: 6706651e0b0ca8b43a51fd1d9da0147c
+  - enabled: 1
+    path: Assets/Scenes/SandBox.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects: {}
