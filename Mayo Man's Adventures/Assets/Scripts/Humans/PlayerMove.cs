@@ -8,12 +8,11 @@ public class PlayerMove : MonoBehaviour {
     public float speed = 10f;
     public Rigidbody rb;
     public float jumpForce;
-   // public Collider col;
 
+  
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-     // col = GetComponent<CapsuleCollider>();
     }
 
 
@@ -36,10 +35,17 @@ public class PlayerMove : MonoBehaviour {
             rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
         }
 
-        if (Input.GetKeyDown("escape"))
-        {
-            Cursor.lockState = CursorLockMode.None;
-        }
+
+            if (Pause.IsPaused)
+            {
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            
+        
 
 
     }

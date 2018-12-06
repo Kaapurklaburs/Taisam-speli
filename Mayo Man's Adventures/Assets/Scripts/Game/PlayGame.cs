@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayGame : MonoBehaviour {
 
+
     public void LoadGame1()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -23,5 +24,6 @@ public class PlayGame : MonoBehaviour {
         Debug.Log("QUIT");
         Application.Quit();
     }
+
 
 }
