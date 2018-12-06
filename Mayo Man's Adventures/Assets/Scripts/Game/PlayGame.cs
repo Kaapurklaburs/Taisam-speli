@@ -9,14 +9,17 @@ public class PlayGame : MonoBehaviour {
     public void LoadGame1()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        Pause.IsPaused = false;
     }
     public void LoadGame2()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        Pause.IsPaused = false;
     }
     public void LoadGame3()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        Pause.IsPaused = false;
     }
 
     public void QuitGame()

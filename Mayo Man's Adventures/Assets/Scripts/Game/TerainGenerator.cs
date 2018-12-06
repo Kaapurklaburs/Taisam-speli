@@ -44,7 +44,7 @@ public class TerainGenerator : MonoBehaviour {
 
         int vert = 0;
         int tris = 0;
-        for (int i = 0, z = 0; z < zSize; z++)
+        for (int z = 0; z < zSize; z++)
         {
             for (int x = 0; x < xSize; x++)
         {
