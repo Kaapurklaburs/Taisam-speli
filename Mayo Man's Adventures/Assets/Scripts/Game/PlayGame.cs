@@ -27,6 +27,10 @@ public class PlayGame : MonoBehaviour {
         Debug.Log("QUIT");
         Application.Quit();
     }
+    public void SetSlider(float Sensativity)
+    {
+        PlayerLook.sensativity = Sensativity;
+    }
 
 
 }
