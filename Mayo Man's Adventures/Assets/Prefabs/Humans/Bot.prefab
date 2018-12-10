@@ -113,8 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  delay: 6
-  Granade: {fileID: 1540671160586852, guid: d457739ece616594bb7f6aa42fe5869b, type: 2}
+  delay: 0.01
+  Granade: {fileID: 1357544381468092, guid: c35413567258a2948ade421b36ac9abf, type: 2}
   ForceY: 0
 --- !u!136 &136411579517372152
 CapsuleCollider:

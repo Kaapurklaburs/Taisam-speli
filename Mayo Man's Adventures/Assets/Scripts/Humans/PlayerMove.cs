@@ -8,11 +8,32 @@ public class PlayerMove : MonoBehaviour {
     public float speed = 10f;
     public Rigidbody rb;
     public float jumpForce;
+    bool IsGrounded = true;
 
   
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+   // private void OnCollisionEnter(Collision collision)
+  //  {
+   //     if (collision.collider.tag == "Jumpable")
+  //      {
+  //          IsGrounded = true;
+  //      }
+  //      
+  //  }
+    private void OnCollisionExit(Collision collision)
+    {
+        IsGrounded = false;
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.tag == "Jumpable")
+        {
+            IsGrounded = true;
+        }
     }
 
 
@@ -32,21 +53,24 @@ public class PlayerMove : MonoBehaviour {
 
         if (Input.GetKeyDown("space"))
         {
-            rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
+        if(IsGrounded)
+          {
+           rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
+          }
         }
 
 
-            if (Pause.IsPaused)
-            {
-                Cursor.lockState = CursorLockMode.None;
-            }
-            else
-            {
-                Cursor.lockState = CursorLockMode.Locked;
-            }
-            
+        if (Pause.IsPaused)
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         
 
 
     }
+
 }

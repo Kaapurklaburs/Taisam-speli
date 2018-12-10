@@ -39,7 +39,7 @@ GameObject:
   - component: {fileID: 95961922405714350}
   m_Layer: 0
   m_Name: tree2
-  m_TagString: Untagged
+  m_TagString: Jumpable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
