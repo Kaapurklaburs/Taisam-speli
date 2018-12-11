@@ -10,6 +10,7 @@ public class PlayGame : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Pause.IsPaused = false;
+
     }
     public void LoadGame2()
     {

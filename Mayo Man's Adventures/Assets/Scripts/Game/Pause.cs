@@ -20,9 +20,9 @@ public class Pause : MonoBehaviour {
             {
                 Paused();
             }
-
         }
-	}
+
+    }
    public void Resume ()
     {
         PauseMenuUI.SetActive(false);

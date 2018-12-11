@@ -507,7 +507,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a706615a9d2df6341a584353f7ec859b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensativity: 5
   smothing: 2
 --- !u!20 &488425189
 Camera:
