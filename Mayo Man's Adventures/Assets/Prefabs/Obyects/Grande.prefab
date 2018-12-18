@@ -118,6 +118,7 @@ MonoBehaviour:
   BlastF: 3000
   explosionEfect: {fileID: 1432749749454130, guid: b02450db1bbd6174fb77ed11da88b873,
     type: 2}
+  Dumage: 75
 --- !u!136 &136389645611755908
 CapsuleCollider:
   m_ObjectHideFlags: 1

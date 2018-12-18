@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23815624479689668}
   - component: {fileID: 135386571693002400}
   - component: {fileID: 54189278062802404}
-  - component: {fileID: 114030035408879906}
+  - component: {fileID: 114743210215388354}
   m_Layer: 0
   m_Name: Boomb
   m_TagString: Untagged
@@ -101,7 +101,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &114030035408879906
+--- !u!114 &114743210215388354
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,15 +109,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1253338071462230}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b057f08cf7b0734eae591d03a4a0148, type: 3}
+  m_Script: {fileID: 11500000, guid: fca163d73d7189c4080803a17902ce9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   zero: {fileID: 4864818668946794, guid: 8f9745621130dbe4cba1da67eaa2f2a0, type: 2}
-  delay: 6
-  BlastR: 25
-  BlastF: 9000
+  delay: 5
+  BlastR: 15
+  BlastF: 7000
   explosionEfect: {fileID: 1432749749454130, guid: b02450db1bbd6174fb77ed11da88b873,
     type: 2}
+  Dumage: 200
 --- !u!135 &135386571693002400
 SphereCollider:
   m_ObjectHideFlags: 1

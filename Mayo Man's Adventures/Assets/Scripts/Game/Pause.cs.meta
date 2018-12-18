@@ -6,6 +6,9 @@ MonoImporter:
   defaultReferences:
   - PauseMenuUI: {fileID: 1176735989609740, guid: 961376efcea1bb74ab7be1ee64714186,
       type: 2}
+  - PauseMenu: {fileID: 1277878337241698, guid: 961376efcea1bb74ab7be1ee64714186,
+      type: 2}
+  - DeadMenu: {fileID: 1961360107700224, guid: 961376efcea1bb74ab7be1ee64714186, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

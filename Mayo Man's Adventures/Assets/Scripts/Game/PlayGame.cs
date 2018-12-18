@@ -10,17 +10,23 @@ public class PlayGame : MonoBehaviour {
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Pause.IsPaused = false;
+        HP.PlayerDead = false;
+        Time.timeScale = 1f;
 
     }
     public void LoadGame2()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         Pause.IsPaused = false;
+        HP.PlayerDead = false;
+        Time.timeScale = 1f;
     }
     public void LoadGame3()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
         Pause.IsPaused = false;
+        HP.PlayerDead = false;
+        Time.timeScale = 1f;
     }
 
     public void QuitGame()

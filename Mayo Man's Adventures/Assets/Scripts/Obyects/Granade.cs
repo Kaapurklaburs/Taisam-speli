@@ -11,6 +11,7 @@ public class Granade : MonoBehaviour {
     bool hasExploded = false;
     public GameObject explosionEfect;
     float cowntDown;
+    public float Dumage;
 
     // Use this for initialization
     void Start()
@@ -32,16 +33,30 @@ public class Granade : MonoBehaviour {
     void Explode()
     {
         Instantiate(explosionEfect, transform.position, zero.rotation);
-        Collider[] colliders = Physics.OverlapSphere(transform.position, BlastR);
-        foreach (Collider nearbyObject in colliders)
+
+        Collider[] collidersDumage = Physics.OverlapSphere(transform.position, BlastR);
+        foreach (Collider nearbyObject in collidersDumage)
+        {
+
+            HP dest = nearbyObject.GetComponent<HP>();
+            if (dest != null)
+            {
+                HP.dumage = Dumage;
+                dest.Dumage();
+            }
+
+        }
+
+        Collider[] collidersMove = Physics.OverlapSphere(transform.position, BlastR);
+        foreach (Collider nearbyObject in collidersMove)
         {
             Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
                 rb.AddExplosionForce(BlastF, transform.position, BlastR);
             }
-
         }
+
         Destroy(gameObject);
     }
 }

@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BotThrow : MonoBehaviour {
+public class Bot : MonoBehaviour {
 
     public Transform player;
+    public Rigidbody Me;
     public float delay = 3f;
     public GameObject Granade;
     float cowntDown;
+    public float range = 20f;
     Vector3 off;
     private float ForceX;
     private float ForceZ;
@@ -15,26 +17,38 @@ public class BotThrow : MonoBehaviour {
     Vector3 offset1;
     Vector3 offset2;
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
+
     // Use this for initialization
     void Start()
     {
         cowntDown = delay;
     }
 
+
     // Update is called once per frame
     void Update()
     {
+        off = player.position - transform.position;
         cowntDown -= Time.deltaTime;
+
+
         if (cowntDown <= 0f)
         {
-            Explode();
+            Throw();
             cowntDown = delay;
         }
-    }
 
-    void Explode()
+    }
+    
+
+    void Throw()
     {
-        off = player.position - transform.position;
+        
         ForceX = off.x;
         ForceZ = off.z;
 
@@ -64,4 +78,5 @@ public class BotThrow : MonoBehaviour {
         rb.AddForce(ForceX, ForceY, ForceZ, ForceMode.Impulse);
 
     }
+ 
 }

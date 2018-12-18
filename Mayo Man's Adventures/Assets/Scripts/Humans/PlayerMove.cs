@@ -16,14 +16,6 @@ public class PlayerMove : MonoBehaviour {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-   // private void OnCollisionEnter(Collision collision)
-  //  {
-   //     if (collision.collider.tag == "Jumpable")
-  //      {
-  //          IsGrounded = true;
-  //      }
-  //      
-  //  }
     private void OnCollisionExit(Collision collision)
     {
         IsGrounded = false;
