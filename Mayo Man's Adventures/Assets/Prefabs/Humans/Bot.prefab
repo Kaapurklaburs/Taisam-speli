@@ -116,9 +116,9 @@ MonoBehaviour:
   player: {fileID: 0}
   Me: {fileID: 54228516995350882}
   delay: 4
-  Granade: {fileID: 1357544381468092, guid: c35413567258a2948ade421b36ac9abf, type: 2}
+  Granade: {fileID: 1540671160586852, guid: d457739ece616594bb7f6aa42fe5869b, type: 2}
   range: 10
-  ForceY: 0
+  ForceY: 1
 --- !u!114 &114831879187832640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,8 +130,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324390d6348dde54abdbd0ee6161a81a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 100
+  startHP: 100
   me: {fileID: 1367933949240352}
+  IsPlayer: 0
+  HPbar: {fileID: 0}
 --- !u!136 &136411579517372152
 CapsuleCollider:
   m_ObjectHideFlags: 1
