@@ -8,6 +8,7 @@ public class PlayerLook : MonoBehaviour {
     Vector2 smothV;
     public static float sensativity = 2.0f;
     public float smothing = 2.0f;
+    private bool IsSlowed = false;
 
     GameObject Player;
 
@@ -28,5 +29,23 @@ public class PlayerLook : MonoBehaviour {
 
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         Player.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, Player.transform.up);
+
+        if (Input.GetKeyDown("t"))
+        {
+            if (IsSlowed)
+            {
+                Time.timeScale = 0.1f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
+
+
+
+        }
+
+
     }
+
 }
