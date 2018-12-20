@@ -115,7 +115,7 @@ MonoBehaviour:
   zero: {fileID: 4864818668946794, guid: 8f9745621130dbe4cba1da67eaa2f2a0, type: 2}
   delay: 3
   BlastR: 7
-  BlastF: -10000
+  BlastF: -1000
   explosionEfect: {fileID: 1432749749454130, guid: b02450db1bbd6174fb77ed11da88b873,
     type: 2}
   Dumage: 25

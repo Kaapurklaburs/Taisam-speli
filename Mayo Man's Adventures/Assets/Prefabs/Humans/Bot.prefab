@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 33081595411188362}
   - component: {fileID: 23799039373647080}
   - component: {fileID: 136411579517372152}
+  - component: {fileID: 135559798597859832}
   - component: {fileID: 54228516995350882}
   - component: {fileID: 114659403754606986}
   - component: {fileID: 114831879187832640}
@@ -115,10 +116,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   Me: {fileID: 54228516995350882}
-  delay: 4
+  delay: 0.01
   Granade: {fileID: 1540671160586852, guid: d457739ece616594bb7f6aa42fe5869b, type: 2}
-  range: 10
   ForceY: 1
+  speed: 100
 --- !u!114 &114831879187832640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -134,6 +135,18 @@ MonoBehaviour:
   me: {fileID: 1367933949240352}
   IsPlayer: 0
   HPbar: {fileID: 0}
+--- !u!135 &135559798597859832
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1367933949240352}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 15
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136411579517372152
 CapsuleCollider:
   m_ObjectHideFlags: 1

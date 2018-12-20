@@ -9,19 +9,14 @@ public class Bot : MonoBehaviour {
     public float delay = 3f;
     public GameObject Granade;
     float cowntDown;
-    public float range = 20f;
     Vector3 off;
     private float ForceX;
     private float ForceZ;
     public float ForceY;
     Vector3 offset1;
     Vector3 offset2;
-
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, range);
-    }
+    public float speed = 2f;
+    private bool faund = false;
 
     // Use this for initialization
     void Start()
@@ -36,12 +31,19 @@ public class Bot : MonoBehaviour {
         off = player.position - transform.position;
         cowntDown -= Time.deltaTime;
 
-
-        if (cowntDown <= 0f)
+        if (faund)
         {
-            Throw();
-            cowntDown = delay;
+           if (cowntDown <= 0f)
+           {
+               Throw();
+               cowntDown = delay;
+           }
         }
+        else
+        {
+            Find();
+        }
+
 
     }
     
@@ -78,5 +80,27 @@ public class Bot : MonoBehaviour {
         rb.AddForce(ForceX, ForceY, ForceZ, ForceMode.Impulse);
 
     }
- 
+
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == ("Player"))
+        {
+            faund = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == ("Player"))
+        {
+            faund = false;
+        }
+    }
+    void Find()
+    {
+        Me.AddForce(off.x / speed, 0f, off.z / speed, ForceMode.Acceleration);
+
+    }
 }

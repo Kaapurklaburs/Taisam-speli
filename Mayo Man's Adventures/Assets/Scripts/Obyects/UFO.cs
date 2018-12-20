@@ -7,11 +7,12 @@ public class UFO : MonoBehaviour {
     public Transform player;
     public Rigidbody Me;
     public GameObject Granade;
-    public float delay = 3f;
+    public float delay = 0.1f;
     float cowntDown;
     Vector3 offset;
     private Vector3 off;
     public Vector3 Soff;
+    private bool faund = false;
 
     void Start()
     {
@@ -24,12 +25,19 @@ public class UFO : MonoBehaviour {
         off = player.position - transform.position;
         cowntDown -= Time.deltaTime;
 
-
-        if (cowntDown <= 0f)
+        if (faund)
         {
-            Spawn();
-            cowntDown = delay;
+           if (cowntDown <= 0f)
+           {
+               Spawn();
+               cowntDown = delay;
+           }
         }
+        else
+        {
+            Find();
+        }
+
 
 
 
@@ -41,6 +49,28 @@ public class UFO : MonoBehaviour {
         offset = transform.position + Soff;
 
         GameObject granade = Instantiate(Granade, transform.position, transform.rotation);
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == ("Player"))
+        {
+            faund = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == ("Player"))
+        {
+            faund = false;
+        }
+    }
+
+    void Find()
+    {
+        Me.AddForce(off.x * 3f, 0f, off.z * 3f, ForceMode.Force);
 
     }
 }
