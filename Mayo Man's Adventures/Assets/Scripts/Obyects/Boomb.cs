@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Granade : MonoBehaviour {
+public class Boomb : MonoBehaviour {
 
-    public Transform zero;
+        public Transform zero;
     public float delay = 3f;
     public float BlastR = 5f;
     public float BlastF = 700f;
