@@ -22,10 +22,9 @@ GameObject:
   - component: {fileID: 33081595411188362}
   - component: {fileID: 23799039373647080}
   - component: {fileID: 136411579517372152}
-  - component: {fileID: 135559798597859832}
   - component: {fileID: 54228516995350882}
-  - component: {fileID: 114659403754606986}
   - component: {fileID: 114831879187832640}
+  - component: {fileID: 114505527393155146}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -103,7 +102,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 1
---- !u!114 &114659403754606986
+--- !u!114 &114505527393155146
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,15 +110,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1367933949240352}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c241d31f4b7c75488cc7a3f1609d750, type: 3}
+  m_Script: {fileID: 11500000, guid: a3c303f0e0ce57543999bce982884390, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  Range: 10
   Me: {fileID: 54228516995350882}
-  delay: 0.01
+  delay: 3
   Granade: {fileID: 1540671160586852, guid: d457739ece616594bb7f6aa42fe5869b, type: 2}
   ForceY: 1
-  speed: 100
 --- !u!114 &114831879187832640
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,18 +133,6 @@ MonoBehaviour:
   me: {fileID: 1367933949240352}
   IsPlayer: 0
   HPbar: {fileID: 0}
---- !u!135 &135559798597859832
-SphereCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1367933949240352}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 15
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!136 &136411579517372152
 CapsuleCollider:
   m_ObjectHideFlags: 1
