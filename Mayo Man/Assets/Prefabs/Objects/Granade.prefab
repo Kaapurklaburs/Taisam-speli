@@ -100,7 +100,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386773600535772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: 0.5, z: 1}
+  m_LocalPosition: {x: 3.1896644, y: 0.20432323, z: 0.38849112}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4143426730890508}
@@ -276,7 +276,7 @@ MonoBehaviour:
   BlastF: 700
   explosionEfect: {fileID: 1521927691774196, guid: 079a516e67ee7214da18cf6a762bfc59,
     type: 2}
-  Dumage: 10
+  Dumage: 50
 --- !u!136 &136444490172408748
 CapsuleCollider:
   m_ObjectHideFlags: 1

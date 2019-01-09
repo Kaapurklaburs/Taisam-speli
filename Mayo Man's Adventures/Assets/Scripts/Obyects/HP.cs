@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class HP : MonoBehaviour {
 
     private float hp;
-    private float hp2;
     public float startHP;
     public GameObject me;
     public static float dumage;
@@ -18,18 +17,20 @@ public class HP : MonoBehaviour {
     private void Start()
     {
         hp = startHP;
-        hp2 = hp;
     }
 
     public void Dumage()
     {
-        hp2 = hp - dumage;
-        hp = hp2;
+        hp -= dumage;
+
+
         if (IsPlayer)
         {
             Php = hp;
             HPbar.fillAmount = Php / startHP;
         }
+
+
         if (hp <= 0f)
         {
             if (IsPlayer)
@@ -40,9 +41,17 @@ public class HP : MonoBehaviour {
             }
             else
             {
-                me.SetActive(false);
+                Debug.Log("+ 1 kill");
+                Die();
             }
            
         }
+    }
+
+    void Die()
+    {
+        Debug.Log("+ 1 kill");
+        Money.kills += 1;
+        Destroy(gameObject);
     }
 }

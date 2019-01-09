@@ -17,6 +17,7 @@ public class HP : MonoBehaviour
     public static float Php;
     public Image HPbar;
 
+    public float amount { get; internal set; }
 
     private void Start()
     {

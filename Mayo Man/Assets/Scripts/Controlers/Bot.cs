@@ -37,6 +37,12 @@ public class Bot : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+
+        if (Pause.IsPaused)
+        {
+            return;
+        }
+
         tArget = new Vector3(target.position.x, 1f, target.position.z);
         realSpeed = Speed / 1000f;
         float distance = Vector3.Distance(target.position, transform.position);
