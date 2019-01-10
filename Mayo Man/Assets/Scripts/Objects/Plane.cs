@@ -11,6 +11,7 @@ public class Plane : MonoBehaviour {
     public GameObject Granade;
     float cowntDown;
     public Vector3 offset;
+    public Vector3 SpawnOffset;
 
     void Start()
     {
@@ -38,6 +39,6 @@ public class Plane : MonoBehaviour {
 
     void Bomb()
     {
-     Instantiate(Granade, transform.position, transform.rotation);
+     Instantiate(Granade, transform.position + SpawnOffset, transform.rotation);
     }
 }

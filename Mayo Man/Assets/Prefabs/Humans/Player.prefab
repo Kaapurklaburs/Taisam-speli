@@ -685,8 +685,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea0f0e21b1c435418846cf681e47451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dumage: 25
-  Range: 7
+  Dumage: 100
+  Range: 5
   ImpactForce: 1
   FireRate: 30
   FPScam: {fileID: 20546714334487826}
@@ -706,9 +706,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea0f0e21b1c435418846cf681e47451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dumage: 33
+  Dumage: 35
   Range: 100
-  ImpactForce: 30
+  ImpactForce: 5
   FireRate: 4
   FPScam: {fileID: 20546714334487826}
   MaxAmo: 10
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f1a91fc29b74a0449ef4b8d55f42066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bonus: 10
+  Bonus: 1
   mBar: {fileID: 0}
 --- !u!114 &114825110899276372
 MonoBehaviour:

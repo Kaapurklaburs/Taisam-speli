@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4df81fe6118188348b9a67e4facdca31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHP: 5000
+  startHP: 500
   me: {fileID: 1405894234147534}
   IsPlayer: 0
   HPbar: {fileID: 0}

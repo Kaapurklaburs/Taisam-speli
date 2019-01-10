@@ -44,7 +44,7 @@ public class HP : MonoBehaviour
             }
             else
             {
-                me.SetActive(false);
+                Die();
             }
 
         }
@@ -59,5 +59,13 @@ public class HP : MonoBehaviour
             Php = hp;
             HPbar.fillAmount = Php / startHP;
         }
+    }
+
+    void Die()
+    {
+        Debug.Log("+ 1 Kill");
+
+        Money.kills++;
+        Destroy(gameObject);
     }
 }

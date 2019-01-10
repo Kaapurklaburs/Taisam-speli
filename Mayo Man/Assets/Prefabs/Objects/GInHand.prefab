@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 4975221830429738}
   - component: {fileID: 95040373447331852}
   m_Layer: 0
-  m_Name: GinHand
+  m_Name: GInHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

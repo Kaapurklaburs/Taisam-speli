@@ -10,9 +10,14 @@ public class Money : MonoBehaviour {
     public static int kills;
     private int MaxMoney = 100;
     public Image mBar;
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Start()
+    {
+        kills = 0;
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         money = kills * Bonus;
         mBar.fillAmount = money / MaxMoney;
