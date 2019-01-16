@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114893629195782250}
   m_Layer: 0
   m_Name: Flor
-  m_TagString: Jumpable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153678834540154}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2, y: 2, z: 0}
-  m_LocalScale: {x: 16, y: 0.5, z: 20}
+  m_LocalPosition: {x: 2.5, y: 2.5, z: 0.5}
+  m_LocalScale: {x: 16, y: 0.5, z: 19}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +58,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: fdc547c961317234fa81b08b822c1a6d, type: 2}
+  - {fileID: 2100000, guid: 8530f3a05bfc5a048bfcfe0d84241775, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -113,3 +113,4 @@ MonoBehaviour:
   IsPlayer: 0
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
+  offset: {x: 0, y: 0, z: 0}
