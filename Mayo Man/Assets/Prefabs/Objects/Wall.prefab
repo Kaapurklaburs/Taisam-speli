@@ -112,3 +112,4 @@ MonoBehaviour:
   me: {fileID: 1405894234147534}
   IsPlayer: 0
   HPbar: {fileID: 0}
+  leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}

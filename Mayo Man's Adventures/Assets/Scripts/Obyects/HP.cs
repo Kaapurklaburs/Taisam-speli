@@ -13,6 +13,8 @@ public class HP : MonoBehaviour {
     public static bool PlayerDead = false;
     public static float Php;
     public Image HPbar;
+    public GameObject leftOver;
+    public Vector3 offset;
 
     private void Start()
     {
@@ -51,7 +53,8 @@ public class HP : MonoBehaviour {
     void Die()
     {
         Debug.Log("+ 1 kill");
+
         Money.kills += 1;
         Destroy(gameObject);
-    }
+     }
 }

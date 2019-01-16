@@ -765,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95982f3c07be2e043bf6d98f5b16c0f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Force: 20
+  Force: 15
   Granade: {fileID: 1386773600535772, guid: 787f279b9ac3e324b8cb9530012cd190, type: 2}
 --- !u!114 &114622731967557854
 MonoBehaviour:

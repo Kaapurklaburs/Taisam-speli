@@ -16,6 +16,8 @@ public class HP : MonoBehaviour
     public static bool PlayerDead = false;
     public static float Php;
     public Image HPbar;
+    public GameObject leftOver;
+    public Vector3 offset;
 
     public float amount { get; internal set; }
 
@@ -64,7 +66,7 @@ public class HP : MonoBehaviour
     void Die()
     {
         Debug.Log("+ 1 Kill");
-
+        Instantiate(leftOver, transform.position + offset, transform.rotation);
         Money.kills++;
         Destroy(gameObject);
     }

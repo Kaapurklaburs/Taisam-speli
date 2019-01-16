@@ -62,6 +62,8 @@ public class Bot : MonoBehaviour {
             Move();
         }
 
+        transform.LookAt(target);
+
     }
 
     void Throw()
@@ -102,4 +104,5 @@ public class Bot : MonoBehaviour {
         Vector3 Target = Vector3.Lerp(transform.position, desiardP, realSpeed);
         transform.position = Target;
     }
+
 }
