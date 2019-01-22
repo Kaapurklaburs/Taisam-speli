@@ -19,7 +19,6 @@ public class Bot : MonoBehaviour {
     public float Speed;
     private float realSpeed;
     Vector3 tArget;
-    private float zero = 0f;
 
 
     void OnDrawGizmosSelected()
