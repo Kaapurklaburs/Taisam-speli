@@ -19,6 +19,8 @@ public class Bot : MonoBehaviour {
     public float Speed;
     private float realSpeed;
     Vector3 tArget;
+    public Transform Foward;
+    Animator animater;
 
 
     void OnDrawGizmosSelected()
@@ -32,18 +34,22 @@ public class Bot : MonoBehaviour {
     void Start()
     {
         target = PlayerManeger.instance.Player.transform;
+        animater = GetComponentInChildren<Animator>();
+        animater.SetFloat("Motion", value: 0.5f);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+ 
+
         if (Pause.IsPaused)
         {
             return;
         }
 
-        tArget = new Vector3(target.position.x, 1f, target.position.z);
+        tArget = new Vector3(Foward.position.x, 1f, Foward.position.z);
         realSpeed = Speed / 1000f;
         float distance = Vector3.Distance(target.position, transform.position);
         off = target.position - transform.position;
@@ -54,7 +60,12 @@ public class Bot : MonoBehaviour {
             if (cowntDown <= 0f)
             {
                 Throw();
+
                 cowntDown = delay;
+            }
+            else
+            {
+                animater.SetFloat("Motion", value: 0.5f);
             }
         }
         else
@@ -67,7 +78,7 @@ public class Bot : MonoBehaviour {
 
     void Throw()
     {
-
+                animater.SetFloat("Motion", value: 1.5f);
         ForceX = off.x;
         ForceZ = off.z;
 
@@ -99,6 +110,7 @@ public class Bot : MonoBehaviour {
 
     void Move()
     {
+        animater.SetFloat("Motion", value: 1f);
         Vector3 desiardP = tArget;
         Vector3 Target = Vector3.Lerp(transform.position, desiardP, realSpeed);
         transform.position = Target;

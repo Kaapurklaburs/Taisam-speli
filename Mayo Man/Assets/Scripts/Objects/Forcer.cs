@@ -6,9 +6,7 @@ public class Forcer : MonoBehaviour {
 
     public Rigidbody rb;
     Transform player;
-    private bool tuched = false;
     public float recharge = 30f;
-    float countdown;
     public float Force = 1000f;
     private Vector3 Offset;
 
@@ -21,8 +19,9 @@ public class Forcer : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
-        countdown -= Time.deltaTime;
+	void Update ()
+    {
+
         Offset = player.position - transform.position;
     }
 
