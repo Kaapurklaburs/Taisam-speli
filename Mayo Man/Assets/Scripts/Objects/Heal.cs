@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Heel : MonoBehaviour {
+public class Heal : MonoBehaviour {
 
     public float heeling = 30f;
 

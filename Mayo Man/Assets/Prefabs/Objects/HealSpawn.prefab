@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4509053264757300}
   - component: {fileID: 114881447110206590}
   m_Layer: 0
-  m_Name: HeelSpawn
+  m_Name: HealSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
