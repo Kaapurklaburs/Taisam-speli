@@ -787,7 +787,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1024865473951464}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.177415, y: 0.911, z: -19.00857}
+  m_LocalPosition: {x: 29, y: 1, z: -20}
   m_LocalScale: {x: 0.5, y: 0.87, z: 0.5}
   m_Children:
   - {fileID: 4747460319157520}
@@ -1072,12 +1072,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a339ae49bb6154b96d7b9189a7002c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 20
+  Range: 13
   Me: {fileID: 54689969249232148}
   delay: 3
   Granade: {fileID: 1386773600535772, guid: 787f279b9ac3e324b8cb9530012cd190, type: 2}
   ForceY: 2
-  Speed: 30
+  Speed: 20
   Foward: {fileID: 4307222492002532}
 --- !u!136 &136405356609248822
 CapsuleCollider:
