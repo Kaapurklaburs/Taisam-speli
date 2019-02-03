@@ -724,6 +724,8 @@ MonoBehaviour:
   muzzleFlash: {fileID: 198782829565243332}
   animator: {fileID: 95068649400061954}
   IsFlameThrower: 1
+  Bullet: {fileID: 1836715663716584, guid: 68b2e74498e48294daf6f2e613dc4e0a, type: 2}
+  ShoteForce: 5
 --- !u!114 &114084148338335982
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -745,6 +747,8 @@ MonoBehaviour:
   muzzleFlash: {fileID: 198726035662622724}
   animator: {fileID: 95068649400061954}
   IsFlameThrower: 0
+  Bullet: {fileID: 1836715663716584, guid: 68b2e74498e48294daf6f2e613dc4e0a, type: 2}
+  ShoteForce: 30
 --- !u!114 &114252323124434502
 MonoBehaviour:
   m_ObjectHideFlags: 1

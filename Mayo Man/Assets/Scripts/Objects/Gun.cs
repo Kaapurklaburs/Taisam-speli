@@ -17,6 +17,9 @@ public class Gun : MonoBehaviour {
     public ParticleSystem muzzleFlash;
     public Animator animator;
     public bool IsFlameThrower;
+    public GameObject Bullet;
+    public float ShoteForce;
+    public GameObject p;
 
     private void Start()
     {
@@ -56,26 +59,29 @@ public class Gun : MonoBehaviour {
 
         muzzleFlash.Play();
 
-        RaycastHit hit;
-        if (Physics.Raycast(FPScam.transform.position, FPScam.transform.forward, out hit, Range))
-        {
+        //       RaycastHit hit;
+        //       if (Physics.Raycast(FPScam.transform.position, FPScam.transform.forward, out hit, Range))
+        //      {
+        //
+        //          HP hp = hit.transform.GetComponent<HP>();
+        //          if (hp != null)
+        //          {
+        //              HP.dumage = Dumage;
+        //             hp.Dumage();
+        //          }
+        //
+        //          if (hit.rigidbody != null)
+        //          {
+        //              hit.rigidbody.AddForce(-hit.normal * ImpactForce);
+        //          }
+        GameObject bullet = Instantiate(Bullet, p.transform.position, p.transform.rotation);
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        rb.AddForce(transform.forward * ShoteForce, ForceMode.Impulse);
 
-            HP hp = hit.transform.GetComponent<HP>();
-            if (hp != null)
-            {
-                HP.dumage = Dumage;
-                hp.Dumage();
-            }
-
-            if (hit.rigidbody != null)
-            {
-                hit.rigidbody.AddForce(-hit.normal * ImpactForce);
-            }
-
-            correntAmo--;
+        correntAmo--;
         }
-    }
-    #region
+    
+    #region Relode
     IEnumerator Relode()
     {
         muzzleFlash.Stop();
@@ -97,3 +103,4 @@ public class Gun : MonoBehaviour {
     }
     #endregion
 }
+
