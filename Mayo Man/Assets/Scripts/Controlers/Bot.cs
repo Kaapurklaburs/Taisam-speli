@@ -20,6 +20,7 @@ public class Bot : MonoBehaviour {
     private float realSpeed;
     Vector3 tArget;
     public Transform Foward;
+
   //  Animator animater;
 
 
@@ -70,6 +71,7 @@ public class Bot : MonoBehaviour {
         }
         else
         {
+
             Move();
         }
 
@@ -110,6 +112,7 @@ public class Bot : MonoBehaviour {
 
     void Move()
     {
+
        // animater.SetFloat("Motion", value: 1f);
         Vector3 desiardP = tArget;
         Vector3 Target = Vector3.Lerp(transform.position, desiardP, realSpeed);

@@ -17,15 +17,13 @@ public class Gun : MonoBehaviour {
     public ParticleSystem muzzleFlash;
     public Animator animator;
     public bool IsFlameThrower;
-    public GameObject Bullet;
-    public float ShoteForce;
-    public GameObject p;
+
 
     private void Start()
     {
         correntAmo = MaxAmo;
     }
-     void OnEnable()
+    void OnEnable()
     {
         IsReloding = false;
         animator.SetBool("Reloding", false);
@@ -33,74 +31,74 @@ public class Gun : MonoBehaviour {
 
 
     // Update is called once per frame
-    void Update () {
+    void Update() {
 
         if (IsReloding)
             return;
 
         if (correntAmo <= 0)
         {
-            StartCoroutine(Relode());
+            StartCoroutine(Relod());
             return;
         }
 
-		if (Input.GetButton("Fire1") && Time.time >= NextTimeToFire)
+        if (Input.GetButton("Fire1") && Time.time >= NextTimeToFire)
         {
-            NextTimeToFire = Time.time + 1f / FireRate; 
+            NextTimeToFire = Time.time + 1f / FireRate;
             Shote();
         }
 
 
-         
-	}
+
+    }
+
+        #region Relode
+        IEnumerator Relod()
+        {
+            muzzleFlash.Stop();
+
+            IsReloding = true;
+            Debug.Log("Reloding...");
+
+            animator.SetBool("Reloding", true);
+
+            yield return new WaitForSeconds(relodTime - 0.3f);
+
+            animator.SetBool("Reloding", false);
+
+            yield return new WaitForSeconds(0.3f);
+
+            correntAmo = MaxAmo;
+            IsReloding = false;
+            Debug.Log("Ok");
+        }
+        #endregion
 
     void Shote()
     {
 
         muzzleFlash.Play();
 
-        //       RaycastHit hit;
-        //       if (Physics.Raycast(FPScam.transform.position, FPScam.transform.forward, out hit, Range))
-        //      {
-        //
-        //          HP hp = hit.transform.GetComponent<HP>();
-        //          if (hp != null)
-        //          {
-        //              HP.dumage = Dumage;
-        //             hp.Dumage();
-        //          }
-        //
-        //          if (hit.rigidbody != null)
-        //          {
-        //              hit.rigidbody.AddForce(-hit.normal * ImpactForce);
-        //          }
-        GameObject bullet = Instantiate(Bullet, p.transform.position, p.transform.rotation);
-        Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * ShoteForce, ForceMode.Impulse);
+        RaycastHit hit;
+        if (Physics.Raycast(FPScam.transform.position, FPScam.transform.forward, out hit, Range))
+        {
 
-        correntAmo--;
+            HP hp = hit.transform.GetComponent<HP>();
+            if (hp != null)
+            {
+                HP.dumage = Dumage;
+                hp.Dumage();
+            }
+
+            if (hit.rigidbody != null)
+            {
+                hit.rigidbody.AddForce(-hit.normal * ImpactForce);
+            }
+
+            correntAmo--;
         }
-    
-    #region Relode
-    IEnumerator Relode()
-    {
-        muzzleFlash.Stop();
 
-        IsReloding = true;
-        Debug.Log("Reloding...");
 
-        animator.SetBool("Reloding" , true);
-
-        yield return new WaitForSeconds(relodTime - 0.3f);
-
-        animator.SetBool("Reloding", false);
-
-        yield return new WaitForSeconds(0.3f);
-
-        correntAmo = MaxAmo;
-        IsReloding = false;
-        Debug.Log("Ok");
     }
-    #endregion
 }
 
