@@ -18,6 +18,8 @@ public class HP : MonoBehaviour
     public Image HPbar;
     public GameObject leftOver;
     public Vector3 offset;
+    private bool isDead = false;
+    public bool isKill = false;
 
     public float amount { get; internal set; }
 
@@ -36,7 +38,7 @@ public class HP : MonoBehaviour
             Php = hp;
             HPbar.fillAmount = Php / startHP;
         }
-        if (hp <= 0f)
+        if (hp <= 0f && isDead == false)
         {
             if (IsPlayer)
             {
@@ -47,6 +49,7 @@ public class HP : MonoBehaviour
             else
             {
                 Die();
+                isDead = true;
             }
 
         }
@@ -65,7 +68,10 @@ public class HP : MonoBehaviour
 
     void Die()
     {
+        if (isKill)
+        {
         Debug.Log("+ 1 Kill");
+        }
         Instantiate(leftOver, transform.position + offset, transform.rotation);
         Money.kills++;
         Destroy(gameObject);
