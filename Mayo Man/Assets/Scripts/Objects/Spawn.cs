@@ -7,7 +7,11 @@ public class Spawn : MonoBehaviour
     public float delay = 3f;
     public GameObject TheObject;
     float cowntDown;
-  
+    private void Start()
+    {
+        cowntDown = delay;
+    }
+
     void Update()
     {
 

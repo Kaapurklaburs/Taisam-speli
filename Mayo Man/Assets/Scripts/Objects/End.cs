@@ -7,6 +7,7 @@ public class End : MonoBehaviour {
     // public GameObject explosionEfect;
     public float LifeTime = 2f;
 
+
     void Start()
     {
 
@@ -14,7 +15,6 @@ public class End : MonoBehaviour {
 
     void Update()
     {
-        // Instantiate(explosionEfect, transform.position, transform.rotation);
         Destroy(gameObject, LifeTime);
     }
 }
