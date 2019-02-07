@@ -67,7 +67,7 @@ public class Pause : MonoBehaviour {
     {
         PauseMenu.SetActive(false);
         DeadMenu.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 0.01f;
         IsPaused = true;
     }
     public void Retry()
