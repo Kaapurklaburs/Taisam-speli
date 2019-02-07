@@ -1565,6 +1565,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114138276203220036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1582,6 +1583,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114165429604791744
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1599,6 +1601,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114218687345139322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1616,6 +1619,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114313960908620792
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1633,6 +1637,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114325212826118166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1650,6 +1655,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114414875217400296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1667,6 +1673,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114418356521352026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1684,6 +1691,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114434557075670826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1701,6 +1709,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114495071136812508
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1718,6 +1727,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114534660258265082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1735,6 +1745,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114544960912268554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1765,6 +1776,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114628974594411142
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1782,6 +1794,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114751734421590090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1799,6 +1812,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114768759299406748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1816,6 +1830,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114784552631431452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1833,6 +1848,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
 --- !u!114 &114973926973062550
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1850,3 +1866,4 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
