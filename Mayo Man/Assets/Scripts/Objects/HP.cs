@@ -59,6 +59,8 @@ public class HP : MonoBehaviour
             hp2 = hp + heel;
             hp = hp2;
             Php = hp;
+            Php *= 10;
+            Php = Mathf.Round(Php);
             HPbar.fillAmount = Php / startHP;
         }
     }
