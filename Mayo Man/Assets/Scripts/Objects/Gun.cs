@@ -18,11 +18,12 @@ public class Gun : MonoBehaviour {
     public Animator animator;
     public bool IsFlameThrower;
 
+
     private void Start()
     {
         correntAmo = MaxAmo;
     }
-     void OnEnable()
+    void OnEnable()
     {
         IsReloding = false;
         animator.SetBool("Reloding", false);
@@ -30,26 +31,48 @@ public class Gun : MonoBehaviour {
 
 
     // Update is called once per frame
-    void Update () {
+    void Update() {
 
         if (IsReloding)
             return;
 
         if (correntAmo <= 0)
         {
-            StartCoroutine(Relode());
+            StartCoroutine(Relod());
             return;
         }
 
-		if (Input.GetButton("Fire1") && Time.time >= NextTimeToFire)
+        if (Input.GetButton("Fire1") && Time.time >= NextTimeToFire)
         {
-            NextTimeToFire = Time.time + 1f / FireRate; 
+            NextTimeToFire = Time.time + 1f / FireRate;
             Shote();
         }
 
 
-         
-	}
+
+    }
+
+        #region Relode
+        IEnumerator Relod()
+        {
+            muzzleFlash.Stop();
+
+            IsReloding = true;
+            Debug.Log("Reloding...");
+
+            animator.SetBool("Reloding", true);
+
+            yield return new WaitForSeconds(relodTime - 0.3f);
+
+            animator.SetBool("Reloding", false);
+
+            yield return new WaitForSeconds(0.3f);
+
+            correntAmo = MaxAmo;
+            IsReloding = false;
+            Debug.Log("Ok");
+        }
+        #endregion
 
     void Shote()
     {
@@ -74,26 +97,8 @@ public class Gun : MonoBehaviour {
 
             correntAmo--;
         }
+
+
     }
-    #region
-    IEnumerator Relode()
-    {
-        muzzleFlash.Stop();
-
-        IsReloding = true;
-        Debug.Log("Reloding...");
-
-        animator.SetBool("Reloding" , true);
-
-        yield return new WaitForSeconds(relodTime - 0.3f);
-
-        animator.SetBool("Reloding", false);
-
-        yield return new WaitForSeconds(0.3f);
-
-        correntAmo = MaxAmo;
-        IsReloding = false;
-        Debug.Log("Ok");
-    }
-    #endregion
 }
+

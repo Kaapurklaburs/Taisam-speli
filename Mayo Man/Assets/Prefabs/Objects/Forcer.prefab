@@ -110,4 +110,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   recharge: 30
-  Force: 100
+  Force: 500
