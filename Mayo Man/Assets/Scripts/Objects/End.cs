@@ -7,7 +7,6 @@ public class End : MonoBehaviour {
     public float LifeTime = 2f;
     public bool OneTime = false;
     float countDown;
-    public GameObject me;
 
 
     void Start()
@@ -27,7 +26,7 @@ public class End : MonoBehaviour {
         {
             if(countDown <= 0f)
             {
-            me.SetActive(false);
+            gameObject.SetActive(false);
             }
 
         }

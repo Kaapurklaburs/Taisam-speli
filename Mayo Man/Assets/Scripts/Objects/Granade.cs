@@ -57,6 +57,6 @@ public class Granade : MonoBehaviour {
             }
         }
 
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

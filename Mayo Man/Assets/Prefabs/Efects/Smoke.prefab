@@ -277,6 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LifeTime: 1
+  OneTime: 1
 --- !u!137 &137203368483426048
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

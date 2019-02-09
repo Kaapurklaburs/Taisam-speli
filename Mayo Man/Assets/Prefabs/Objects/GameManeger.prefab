@@ -70,13 +70,13 @@ MonoBehaviour:
     Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
     Size: 200
   - Tag: granade
-    Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
+    Prefab: {fileID: 1386773600535772, guid: 787f279b9ac3e324b8cb9530012cd190, type: 2}
     Size: 200
   - Tag: bananas
-    Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
-    Size: 200
+    Prefab: {fileID: 1763807387362810, guid: 80a8c1beca4a68f40a8a0545f30963d6, type: 2}
+    Size: 43
   - Tag: bred
-    Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
+    Prefab: {fileID: 1586776582030378, guid: e130aff3b7a6b5048a5bef1cf033ad28, type: 2}
     Size: 200
   - Tag: Mayo
     Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
