@@ -10,20 +10,20 @@ public class Granade : MonoBehaviour {
     public float BlastF = 700f;
     bool hasExploded = false;
     public GameObject explosionEfect;
-    float cowntDown;
+    float countDown;
     public float Dumage;
 
     // Use this for initialization
     void Start()
     {
-        cowntDown = delay;
+        countDown = delay;
     }
 
     // Update is called once per frame
     void Update()
     {
-        cowntDown -= Time.deltaTime;
-        if (cowntDown <= 0f && hasExploded == false)
+        countDown -= Time.deltaTime;
+        if (countDown <= 0f && hasExploded == false)
         {
             Explode();
             hasExploded = true;

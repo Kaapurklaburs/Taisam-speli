@@ -13,7 +13,7 @@ public class PlayerThrow : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(0))
         {
-            GameObject granade = Instantiate(Granade, transform.position, transform.rotation);
+            GameObject granade = ObjectPool.Instance.SpawnFromPool("granade", transform.position, transform.rotation);
             Rigidbody rb = granade.GetComponent<Rigidbody>();
             rb.AddForce(transform.forward * Force, ForceMode.Impulse);
         }

@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spawn : MonoBehaviour {
+public class PoolSpawn : MonoBehaviour {
 
     public string Pool;
 
     private void FixedUpdate()
     {
-        ObjectPooler.Instance.SpawnFromPool( Pool , transform.position, Quaternion.identity);
+        ObjectPool.Instance.SpawnFromPool( Pool , transform.position, Quaternion.identity);
     }
 }

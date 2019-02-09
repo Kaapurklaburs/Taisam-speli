@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4475892094513904}
   - component: {fileID: 114393034589835806}
+  - component: {fileID: 114564340092506906}
   - component: {fileID: 114569470537450604}
   m_Layer: 0
   m_Name: GameManeger
@@ -52,8 +53,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a0f412b426234458cd226854bac2e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1772472783323144, guid: ff083437f39a34b4d88706af41dbfb47, type: 2}
---- !u!114 &114569470537450604
+  Player: {fileID: 0}
+--- !u!114 &114564340092506906
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,11 +62,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 1482858998750604}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9712a61f44397e042a18414a568ca830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pools:
+  - Tag: Water
+    Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
+    Size: 200
+  - Tag: granade
+    Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
+    Size: 200
+  - Tag: bananas
+    Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
+    Size: 200
+  - Tag: bred
+    Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
+    Size: 200
+  - Tag: Mayo
+    Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
+    Size: 200
+--- !u!114 &114569470537450604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1482858998750604}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a36c43bcf00b8574a8824151e121a2b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenuUI: {fileID: 1166801727412770, guid: b191e7bf7cad76c46aa0d364926614fa,
-    type: 2}
-  PauseMenu: {fileID: 1940200622170234, guid: b191e7bf7cad76c46aa0d364926614fa, type: 2}
-  DeadMenu: {fileID: 1957756553140262, guid: b191e7bf7cad76c46aa0d364926614fa, type: 2}
+  PauseMenuUI: {fileID: 0}
+  PauseMenu: {fileID: 0}
+  DeadMenu: {fileID: 0}
   G: 1
