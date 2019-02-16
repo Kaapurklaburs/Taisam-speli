@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 114622731967557854}
   - component: {fileID: 114825110899276372}
   - component: {fileID: 114303186280283302}
+  - component: {fileID: 114925700509408632}
   - component: {fileID: 114935877913827436}
   m_Layer: 0
   m_Name: Player
@@ -1934,6 +1935,18 @@ MonoBehaviour:
   Force: 15
   rObject: 1
   Granade: {fileID: 1103452378307448, guid: 13333304fcbad264f9aea9be5d8ac761, type: 2}
+--- !u!114 &114925700509408632
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1772472783323144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1920690ae6202e4429e74efcf2e0f991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0.35
 --- !u!114 &114935877913827436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1945,8 +1958,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d0e32530f097a34882eda99739f6fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range1: 20
-  Range2: 20.1
+  Range1: 40
+  Range2: 40.05
 --- !u!136 &136073252244887248
 CapsuleCollider:
   m_ObjectHideFlags: 1

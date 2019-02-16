@@ -49,7 +49,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1787032863430778}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -114,3 +114,4 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
+  isKill: 0
