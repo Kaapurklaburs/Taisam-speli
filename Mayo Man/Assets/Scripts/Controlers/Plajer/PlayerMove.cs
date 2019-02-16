@@ -8,11 +8,14 @@ public class PlayerMove : MonoBehaviour {
     public Rigidbody rb;
     public float jumpForce;
     bool IsGrounded = true;
+    Animator animater;
 
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+          animater = GetComponentInChildren<Animator>();
+          animater.SetFloat("Motion", value: 0.5f);
     }
 
     private void OnCollisionExit(Collision collision)
@@ -39,12 +42,12 @@ public class PlayerMove : MonoBehaviour {
         float straffe = Input.GetAxis("Horizontal") * speed;
         translation *= Time.deltaTime;
         straffe *= Time.deltaTime;
-
         transform.Translate(straffe, 0, translation);
 
         if (Input.GetKey("space") && IsGrounded == true)
         {
             rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
+;
         }
 
 
