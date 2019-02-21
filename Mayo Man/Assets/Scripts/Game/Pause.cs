@@ -24,6 +24,21 @@ public class Pause : MonoBehaviour {
         {
             DeadPause();
         }
+        else
+        {
+            if (IsPaused == false)
+            {
+           if (Input.GetKey("t"))
+            {
+                Time.timeScale = 0.4f;
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
+            }
+ 
+        }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -67,7 +82,7 @@ public class Pause : MonoBehaviour {
     {
         PauseMenu.SetActive(false);
         DeadMenu.SetActive(true);
-        Time.timeScale = 0.01f;
+        Time.timeScale = 0.1f;
         IsPaused = true;
     }
     public void Retry()
