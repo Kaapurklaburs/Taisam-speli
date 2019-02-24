@@ -899,7 +899,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!1 &1797834520164978
 GameObject:
@@ -5991,6 +5991,7 @@ MonoBehaviour:
   leftOver: {fileID: 1543152908342898, guid: 7c9bdaa09de6dac4fb6a4386680a4abc, type: 2}
   offset: {x: 0, y: 0, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!114 &114039770169486260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6061,6 +6062,7 @@ MonoBehaviour:
   leftOver: {fileID: 1763807387362810, guid: 80a8c1beca4a68f40a8a0545f30963d6, type: 2}
   offset: {x: 0, y: 0.2, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!114 &114190590342012202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6079,6 +6081,7 @@ MonoBehaviour:
   leftOver: {fileID: 1543152908342898, guid: 7c9bdaa09de6dac4fb6a4386680a4abc, type: 2}
   offset: {x: 0, y: 0, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!114 &114281885543716382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6097,6 +6100,7 @@ MonoBehaviour:
   leftOver: {fileID: 1543152908342898, guid: 7c9bdaa09de6dac4fb6a4386680a4abc, type: 2}
   offset: {x: 0, y: 0, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!114 &114342877023054426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6115,6 +6119,7 @@ MonoBehaviour:
   leftOver: {fileID: 1763807387362810, guid: 80a8c1beca4a68f40a8a0545f30963d6, type: 2}
   offset: {x: 0, y: 0.2, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!114 &114366409979874766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6172,6 +6177,7 @@ MonoBehaviour:
   leftOver: {fileID: 1543152908342898, guid: 7c9bdaa09de6dac4fb6a4386680a4abc, type: 2}
   offset: {x: 0, y: 0, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!114 &114759999207197566
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6190,6 +6196,7 @@ MonoBehaviour:
   leftOver: {fileID: 1763807387362810, guid: 80a8c1beca4a68f40a8a0545f30963d6, type: 2}
   offset: {x: 0, y: 0.2, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!114 &114760644324350940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6208,6 +6215,7 @@ MonoBehaviour:
   leftOver: {fileID: 1543152908342898, guid: 7c9bdaa09de6dac4fb6a4386680a4abc, type: 2}
   offset: {x: 0, y: 0, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!114 &114829061822863994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6239,6 +6247,7 @@ MonoBehaviour:
   leftOver: {fileID: 1543152908342898, guid: 7c9bdaa09de6dac4fb6a4386680a4abc, type: 2}
   offset: {x: 0, y: 0, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!114 &114943645895976026
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6270,6 +6279,7 @@ MonoBehaviour:
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!136 &136073523674090184
 CapsuleCollider:
   m_ObjectHideFlags: 1

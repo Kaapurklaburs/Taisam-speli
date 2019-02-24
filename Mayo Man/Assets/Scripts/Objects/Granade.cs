@@ -11,7 +11,9 @@ public class Granade : MonoBehaviour {
     bool hasExploded = false;
     public GameObject explosionEfect;
     float countDown;
-    public float Dumage;
+    public float Dumage0;
+    private float Dumage1;
+    private float P;
 
     // Use this for initialization
     void Start()
@@ -39,9 +41,12 @@ public class Granade : MonoBehaviour {
         {
 
             HP dest = nearbyObject.GetComponent<HP>();
+            Transform tr = nearbyObject.GetComponent<Transform>();
             if (dest != null)
             {
-                HP.dumage = Dumage;
+                P =  (tr.position - transform.position).sqrMagnitude;
+                Dumage1 = BlastR * BlastR * Dumage0 / P;
+                HP.dumage = Dumage1;
                 dest.Dumage();
             }
 
@@ -58,5 +63,6 @@ public class Granade : MonoBehaviour {
         }
 
         gameObject.SetActive(false);
+        hasExploded = false;
     }
 }

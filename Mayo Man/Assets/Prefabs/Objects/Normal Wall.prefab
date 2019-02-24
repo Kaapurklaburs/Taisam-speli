@@ -28,7 +28,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4115245678295410
 Transform:
@@ -115,3 +115,4 @@ MonoBehaviour:
   leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
   offset: {x: 0, y: 0, z: 0}
   isKill: 0
+  OneTime: 0

@@ -20,6 +20,7 @@ public class HP : MonoBehaviour
     public Vector3 offset;
     private bool isDead = false;
     public bool isKill = false;
+    public bool OneTime = false;
 
     public float amount { get; internal set; }
 
@@ -62,8 +63,6 @@ public class HP : MonoBehaviour
             hp2 = hp + heel;
             hp = hp2;
             Php = hp;
-            Php *= 10;
-            Php = Mathf.Round(Php);
             HPbar.fillAmount = Php / startHP;
         }
     }
@@ -76,6 +75,14 @@ public class HP : MonoBehaviour
         }
         Instantiate(leftOver, transform.position + offset, transform.rotation);
         Money.kills++;
-        Destroy(gameObject);
+        if (OneTime)
+        {
+            Destroy(me);
+        }
+        else
+        {
+            me.SetActive(false);
+        }
+
     }
 }

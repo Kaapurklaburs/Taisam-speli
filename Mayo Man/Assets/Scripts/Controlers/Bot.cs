@@ -28,16 +28,18 @@ public class Bot : MonoBehaviour {
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, Range);
-        cowntDown = delay;
+
     }
 
     // Use this for initialization
     void Start()
     {
         target = PlayerManeger.instance.Player.transform;
-      //  animater = GetComponentInChildren<Animator>();
-      //  animater.SetFloat("Motion", value: 0.5f);
-    }
+        cowntDown = delay;
+        //  animater = GetComponentInChildren<Animator>();
+        //  animater.SetFloat("Motion", value: 0.5f);
+    }      
+      
 
     // Update is called once per frame
     void Update()
@@ -52,11 +54,11 @@ public class Bot : MonoBehaviour {
 
         tArget = new Vector3(Foward.position.x, 1f, Foward.position.z);
         realSpeed = Speed / 1000f;
-        float distance = Vector3.Distance(target.position, transform.position);
+        float distance = (target.position - transform.position).sqrMagnitude;
         off = target.position - transform.position;
         cowntDown -= Time.deltaTime;
 
-        if (distance <= Range)
+        if (distance <= Range * Range)
         {
             if (cowntDown <= 0f)
             {

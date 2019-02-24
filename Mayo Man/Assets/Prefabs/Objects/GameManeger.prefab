@@ -81,6 +81,9 @@ MonoBehaviour:
   - Tag: Mayo
     Prefab: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
     Size: 200
+  - Tag: Turret
+    Prefab: {fileID: 1199065606115478, guid: 7daecae14e28335419661329ae1265c6, type: 2}
+    Size: 10
 --- !u!114 &114569470537450604
 MonoBehaviour:
   m_ObjectHideFlags: 1

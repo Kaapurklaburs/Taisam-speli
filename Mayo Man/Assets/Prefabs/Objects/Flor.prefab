@@ -22,13 +22,12 @@ GameObject:
   - component: {fileID: 33862265570326256}
   - component: {fileID: 23709138456986416}
   - component: {fileID: 65470998796796922}
-  - component: {fileID: 114893629195782250}
   m_Layer: 0
   m_Name: Flor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4571008944560388
 Transform:
@@ -97,21 +96,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114893629195782250
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1153678834540154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4df81fe6118188348b9a67e4facdca31, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startHP: 4000
-  me: {fileID: 1153678834540154}
-  IsPlayer: 0
-  HPbar: {fileID: 0}
-  leftOver: {fileID: 1547877233318654, guid: a9645a71e08035742b7e50d3354b7873, type: 2}
-  offset: {x: 0, y: 0, z: 0}
-  isKill: 0

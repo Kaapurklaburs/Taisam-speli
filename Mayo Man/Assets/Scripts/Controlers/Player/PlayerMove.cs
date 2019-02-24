@@ -8,14 +8,14 @@ public class PlayerMove : MonoBehaviour {
     public Rigidbody rb;
     public float jumpForce;
     bool IsGrounded = true;
-    Animator animater;
+//    Animator animater;
 
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-          animater = GetComponentInChildren<Animator>();
-          animater.SetFloat("Motion", value: 0.5f);
+ //         animater = GetComponentInChildren<Animator>();
+ //       animater.SetFloat("Motion", value: 0.5f);
     }
 
     private void OnCollisionExit(Collision collision)
