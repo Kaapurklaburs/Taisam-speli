@@ -7,7 +7,7 @@ public class PlayerLook : MonoBehaviour
 
     Vector2 mouseLook;
     Vector2 smothV;
-    public static float sensativity = 2.0f;
+    public static float sensativity = 1.0f;
     public float smothing = 2.0f;
 
     GameObject Player;

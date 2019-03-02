@@ -444,6 +444,7 @@ GameObject:
   - component: {fileID: 4443273833419948}
   - component: {fileID: 20546714334487826}
   - component: {fileID: 114252323124434502}
+  - component: {fileID: 114737094977980562}
   - component: {fileID: 81981040565010648}
   m_Layer: 0
   m_Name: Main Camera
@@ -530,7 +531,6 @@ GameObject:
   - component: {fileID: 114622731967557854}
   - component: {fileID: 114825110899276372}
   - component: {fileID: 114303186280283302}
-  - component: {fileID: 114935877913827436}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1733,6 +1733,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bonus: 1
   mBar: {fileID: 0}
+--- !u!114 &114737094977980562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1676380911102230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0e32530f097a34882eda99739f6fe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Range1: 30
+  Range2: 30.5
+  cone: {fileID: 4300000, guid: 7c6820c7d74b061499a09da623da9cbf, type: 3}
+  cam: {fileID: 20546714334487826}
+  coneScale: {x: 20, y: 10, z: 10}
 --- !u!114 &114825110899276372
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1766,19 +1782,6 @@ MonoBehaviour:
   Force: 15
   rObject: 1
   Granade: {fileID: 1103452378307448, guid: 13333304fcbad264f9aea9be5d8ac761, type: 2}
---- !u!114 &114935877913827436
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1772472783323144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d0e32530f097a34882eda99739f6fe9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Range1: 40
-  Range2: 40.05
 --- !u!136 &136073252244887248
 CapsuleCollider:
   m_ObjectHideFlags: 1
