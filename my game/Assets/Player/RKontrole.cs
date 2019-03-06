@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RenderControle : MonoBehaviour
-{
+public class RKontrole : MonoBehaviour {
+
 
     public float Range1 = 5f;
     public float Range2 = 6f;
     Vector3 Foward;
-    public Mesh cone;
     public Camera cam;
-    public Vector3 coneScale;
     public float Range3 = 10f;
-    float Range4 = 10.5f;
 
 
     void OnDrawGizmosSelected()
@@ -23,16 +20,13 @@ public class RenderControle : MonoBehaviour
         Gizmos.DrawWireSphere(Foward, Range2);
     }
 
-    // Use this for initialization
     void Start()
     {
         Foward = transform.forward * (Range1 - 2f) + transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-  //      Cnt3();
         Cnt1();
     }
 
@@ -52,7 +46,7 @@ public class RenderControle : MonoBehaviour
                 }
                 else
                 {
-                    if (nearbyObject.name == "Grounde")
+                    if (nearbyObject.gameObject.isStatic)
                     {
                         ms.enabled = true;
                     }
@@ -65,7 +59,6 @@ public class RenderControle : MonoBehaviour
 
             }
 
-            Cnt2();
         }
     }
 
@@ -83,7 +76,6 @@ public class RenderControle : MonoBehaviour
 
 
                     MeshRenderer mesh = nerbyObject.GetComponent<MeshRenderer>();
-                    Transform tra = nerbyObject.GetComponent<Transform>();
                     if (mesh != null)
                     {
                         mesh.enabled = true;
@@ -93,32 +85,4 @@ public class RenderControle : MonoBehaviour
         }
     }
 
-    void Cnt3()
-    {
-        Collider[] collidersMove = Physics.OverlapSphere(transform.position, Range4);
-        foreach (Collider nearbyObject in collidersMove)
-        {
-            MeshRenderer ms = nearbyObject.GetComponent<MeshRenderer>();
-            Transform tr = nearbyObject.GetComponent<Transform>();
-            if (ms != null)
-            {
-                if ((tr.position - transform.position).sqrMagnitude <= Range3 * Range3)
-                {
-                    ms.enabled = true;
-                }
-                else
-                {
-                    if (nearbyObject.name == "Grounde")
-                    {
-                        ms.enabled = true;
-                    }
-                    else
-                    {
-                        ms.enabled = false;
-                    }
-                }
-            }
-        }
-    }
 }
-    
