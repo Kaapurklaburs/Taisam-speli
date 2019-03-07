@@ -224,8 +224,8 @@ MonoBehaviour:
   sensativity: 1
   smothing: 2
   P: {fileID: 4728226032821654}
-  Force: 40
-  Granade: {fileID: 1930058730808434, guid: fd9393e0e2682a14fab73538fdb3b302, type: 2}
+  Force: 20
+  Granade: {fileID: 1930058730808434, guid: 9a4d620239e893947a417e97cac45570, type: 2}
 --- !u!114 &114521575042334506
 MonoBehaviour:
   m_ObjectHideFlags: 1

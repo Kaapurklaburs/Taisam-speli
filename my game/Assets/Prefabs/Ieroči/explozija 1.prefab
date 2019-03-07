@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlastR: 10
-  BlastF: -1000
+  BlastF: -10000
 --- !u!135 &135554394709771892
 SphereCollider:
   m_ObjectHideFlags: 1

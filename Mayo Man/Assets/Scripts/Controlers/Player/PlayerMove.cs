@@ -4,33 +4,17 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
+
     public float speed = 5f;
     public Rigidbody rb;
     public float jumpForce;
-    bool IsGrounded = true;
-//    Animator animater;
+
 
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
- //         animater = GetComponentInChildren<Animator>();
- //       animater.SetFloat("Motion", value: 0.5f);
     }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        IsGrounded = false;
-    }
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.collider.tag == "Jumpable")
-        {
-            IsGrounded = true;
-        }
-    }
-
-
 
 
     void Update()
@@ -44,10 +28,16 @@ public class PlayerMove : MonoBehaviour {
         straffe *= Time.deltaTime;
         transform.Translate(straffe, 0, translation);
 
-        if (Input.GetKey("space") && IsGrounded == true)
+        if (Input.GetKey("space"))
         {
-            rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
-;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.01f))
+            {
+                if (hit.transform.position.y < transform.position.y)
+                {
+                    rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
+                }
+            }
         }
 
 

@@ -8,11 +8,6 @@ public class RenderControle : MonoBehaviour
     public float Range1 = 5f;
     public float Range2 = 6f;
     Vector3 Foward;
-    public Mesh cone;
-    public Camera cam;
-    public Vector3 coneScale;
-    public float Range3 = 10f;
-    float Range4 = 10.5f;
 
 
     void OnDrawGizmosSelected()
@@ -32,7 +27,6 @@ public class RenderControle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-  //      Cnt3();
         Cnt1();
     }
 
@@ -52,7 +46,7 @@ public class RenderControle : MonoBehaviour
                 }
                 else
                 {
-                    if (nearbyObject.name == "Grounde")
+                    if (nearbyObject.gameObject.isStatic)
                     {
                         ms.enabled = true;
                     }
@@ -65,59 +59,6 @@ public class RenderControle : MonoBehaviour
 
             }
 
-            Cnt2();
-        }
-    }
-
-    void Cnt2()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, Range1 * 5f))
-        {
-            MeshRenderer mhs = hit.collider.GetComponent<MeshRenderer>();
-            if (mhs.enabled == false)
-            {
-                Collider[] collider = Physics.OverlapSphere(hit.transform.position, Range3);
-                foreach (Collider nerbyObject in collider)
-                {
-
-
-                    MeshRenderer mesh = nerbyObject.GetComponent<MeshRenderer>();
-                    Transform tra = nerbyObject.GetComponent<Transform>();
-                    if (mesh != null)
-                    {
-                        mesh.enabled = true;
-                    }
-                }
-            }
-        }
-    }
-
-    void Cnt3()
-    {
-        Collider[] collidersMove = Physics.OverlapSphere(transform.position, Range4);
-        foreach (Collider nearbyObject in collidersMove)
-        {
-            MeshRenderer ms = nearbyObject.GetComponent<MeshRenderer>();
-            Transform tr = nearbyObject.GetComponent<Transform>();
-            if (ms != null)
-            {
-                if ((tr.position - transform.position).sqrMagnitude <= Range3 * Range3)
-                {
-                    ms.enabled = true;
-                }
-                else
-                {
-                    if (nearbyObject.name == "Grounde")
-                    {
-                        ms.enabled = true;
-                    }
-                    else
-                    {
-                        ms.enabled = false;
-                    }
-                }
-            }
         }
     }
 }
