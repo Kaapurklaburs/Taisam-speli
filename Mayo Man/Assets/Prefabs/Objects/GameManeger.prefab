@@ -84,6 +84,9 @@ MonoBehaviour:
   - Tag: Turret
     Prefab: {fileID: 1199065606115478, guid: 7daecae14e28335419661329ae1265c6, type: 2}
     Size: 10
+  - Tag: Shel
+    Prefab: {fileID: 1103452378307448, guid: 13333304fcbad264f9aea9be5d8ac761, type: 2}
+    Size: 30
 --- !u!114 &114569470537450604
 MonoBehaviour:
   m_ObjectHideFlags: 1
