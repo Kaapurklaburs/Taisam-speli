@@ -358,7 +358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 20
   delay: 0.5
-  Bullet: Mayo
+  Bullet: granade
   P: {fileID: 4869854367148000}
   Force: 20
 --- !u!114 &114964941281426626
@@ -378,7 +378,7 @@ MonoBehaviour:
   HPbar: {fileID: 0}
   leftOver: {fileID: 1494523380460934, guid: c9e8cf9adb5f7f84e8c930a35e1c3899, type: 2}
   offset: {x: 0, y: 0, z: 0}
-  isKill: 0
+  isKill: 1
   OneTime: 0
 --- !u!135 &135366484885344386
 SphereCollider:

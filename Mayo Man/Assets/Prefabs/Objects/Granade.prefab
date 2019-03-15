@@ -272,8 +272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zero: {fileID: 4744649227382066, guid: c3c7683c62a9fa9449c192be36d5bdbd, type: 2}
   delay: 3
-  BlastR: 5
-  BlastF: 700
+  BlastR: 6
+  BlastF: 1400
   explosionEfect: {fileID: 1521927691774196, guid: 079a516e67ee7214da18cf6a762bfc59,
     type: 2}
   Dumage0: 15

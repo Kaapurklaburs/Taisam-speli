@@ -970,7 +970,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1772472783323144}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.38, y: 1.97, z: -235.45}
+  m_LocalPosition: {x: -13.38, y: 1.97, z: -224.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4443273833419948}
@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dumage: 35
   Range: 100
-  ImpactForce: 50
+  ImpactForce: 100
   FireRate: 4
   FPScam: {fileID: 20546714334487826}
   MaxAmo: 10
