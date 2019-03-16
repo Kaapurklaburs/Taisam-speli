@@ -53,7 +53,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4666148434284474}
-  - component: {fileID: 95606012711694488}
   - component: {fileID: 54500030042181276}
   - component: {fileID: 65962493951394140}
   - component: {fileID: 136667801827336612}
@@ -585,24 +584,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4196167, y: 0.1678814, z: 0.15640259}
   m_Center: {x: -0.014038086, y: 0.9950646, z: 1.080246}
---- !u!95 &95606012711694488
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1304964903470862}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 01b12a08598ded54d8247dc66d8e9cd8, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114041376292622832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -621,6 +602,7 @@ MonoBehaviour:
   leftOver: {fileID: 1763807387362810, guid: 80a8c1beca4a68f40a8a0545f30963d6, type: 2}
   offset: {x: 0, y: 0.2, z: 0}
   isKill: 0
+  OneTime: 0
 --- !u!136 &136272118431232140
 CapsuleCollider:
   m_ObjectHideFlags: 1

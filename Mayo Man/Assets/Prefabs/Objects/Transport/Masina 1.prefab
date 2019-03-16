@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4558193907804452}
-  - component: {fileID: 95455275073092288}
   m_Layer: 0
   m_Name: Masina 1
   m_TagString: Untagged
@@ -103,6 +102,7 @@ GameObject:
   - component: {fileID: 65907688888529764}
   - component: {fileID: 65753229356111598}
   - component: {fileID: 54534618977176374}
+  - component: {fileID: 75349336387957174}
   m_Layer: 0
   m_Name: 1-Karkass
   m_TagString: Untagged
@@ -738,7 +738,7 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 600
+    targetVelocity: 500
     force: 50
     freeSpin: 0
   m_UseLimits: 0
@@ -772,7 +772,7 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 600
+    targetVelocity: 500
     force: 50
     freeSpin: 0
   m_UseLimits: 0
@@ -911,7 +911,7 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300012, guid: e53a430c8e3059946b3eca55db985de8, type: 3}
+  m_Mesh: {fileID: 4300006, guid: e53a430c8e3059946b3eca55db985de8, type: 3}
 --- !u!65 &65497291643060056
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -946,8 +946,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.69171894, y: 1.7545116, z: 1.681542}
-  m_Center: {x: -0.40568027, y: -0.15887132, z: 0.0000014700042}
+  m_Size: {x: 0.6917189, y: 1.5219059, z: 1.681542}
+  m_Center: {x: -0.25603792, y: -0.28867358, z: 0.000001453888}
 --- !u!65 &65753229356111598
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -984,24 +984,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 4.747342, y: 0.23149425, z: 1.681542}
   m_Center: {x: -1.7018185, y: -0.803449, z: 0.0000015963373}
---- !u!95 &95455275073092288
-Animator:
-  serializedVersion: 3
+--- !u!75 &75349336387957174
+ConstantForce:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1027782947182510}
+  m_GameObject: {fileID: 1632737682247152}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: e53a430c8e3059946b3eca55db985de8, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_Force: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_Torque: {x: 0, y: 0, z: 0}
+  m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!136 &136076222019850190
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -70,7 +70,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4684045838206212}
-  - component: {fileID: 95896468809568968}
   - component: {fileID: 205471592531225626}
   - component: {fileID: 54937763153147254}
   - component: {fileID: 64767364499021628}
@@ -364,24 +363,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: ce6a29d02a1d9c14d91aa5b903cbbe57, type: 3}
---- !u!95 &95896468809568968
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1731290474220400}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: ce6a29d02a1d9c14d91aa5b903cbbe57, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!205 &205471592531225626
 LODGroup:
   m_ObjectHideFlags: 1
