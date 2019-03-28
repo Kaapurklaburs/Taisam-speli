@@ -58,9 +58,6 @@ GameObject:
   - component: {fileID: 23159441718456906}
   - component: {fileID: 65573867123242410}
   - component: {fileID: 54599034454667132}
-  - component: {fileID: 65288153676289064}
-  - component: {fileID: 75416773649566166}
-  - component: {fileID: 114103213080500946}
   m_Layer: 0
   m_Name: Korpus
   m_TagString: Untagged
@@ -207,7 +204,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1087098560857800}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -5.5676513, y: 1.0500007, z: -247.24408}
+  m_LocalPosition: {x: -13.49, y: 1.0500007, z: -247.45578}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4754892541715618}
@@ -754,7 +751,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1381092186653524}
   serializedVersion: 2
-  m_Mass: 20
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -810,7 +807,7 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 1300
+    targetVelocity: 600
     force: 100
     freeSpin: 1
   m_UseLimits: 0
@@ -844,7 +841,7 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 1300
+    targetVelocity: 600
     force: 100
     freeSpin: 1
   m_UseLimits: 0
@@ -870,7 +867,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 1.0000002, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.8499987, y: -0.00000029802322, z: 0.33333343}
+  m_ConnectedAnchor: {x: -0.8499987, y: -0.00000029802322, z: 0.33333334}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -878,7 +875,7 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 1300
+    targetVelocity: 600
     force: 100
     freeSpin: 1
   m_UseLimits: 0
@@ -904,7 +901,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 1.0000002, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.6500017, y: -0.00000029802322, z: -0.33333343}
+  m_ConnectedAnchor: {x: 0.6500017, y: -0.00000029802322, z: -0.33333334}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -912,7 +909,7 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 1300
+    targetVelocity: 600
     force: 100
     freeSpin: 1
   m_UseLimits: 0
@@ -984,18 +981,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65288153676289064
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1381092186653524}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8037577, y: 4.6311717, z: 0.22991475}
-  m_Center: {x: 0, y: 2, z: -0.32}
 --- !u!65 &65573867123242410
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1056,29 +1041,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!75 &75416773649566166
-ConstantForce:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1381092186653524}
-  m_Enabled: 1
-  m_Force: {x: 0, y: -400, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 0}
-  m_Torque: {x: 0, y: 0, z: 0}
-  m_RelativeTorque: {x: 0, y: 0, z: 0}
---- !u!114 &114103213080500946
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1381092186653524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94ec6804fc370e4c83c1599b1f85347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weell1: {fileID: 59915528651384042}
-  weell2: {fileID: 59205849002396700}
-  weell3: {fileID: 59708589945920626}
-  weell4: {fileID: 59607130801799662}
