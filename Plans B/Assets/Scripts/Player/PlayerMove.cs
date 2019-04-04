@@ -18,7 +18,7 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         float translation = Input.GetAxis("Vertical") * speed;
         float straffe = Input.GetAxis("Horizontal") * speed;
