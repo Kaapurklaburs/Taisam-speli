@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About game</title>
+		<!-- Navigation bar-->
+		<style>
+	ul {	
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		font-size: 17px
+		}	
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;	
+		margin: 
+	}
+	li {
+		float:left;
+	}
+	li a:hover {
+		background-color: #111
+		}
+		.logo-img{
+		float: left;
+		display: inline-block;
+		margin-left:15 px;
+	}
+		</style>
+		<!-- Background image-->
+		<style>
+	body, html {
+	height: 100%;
+	margin: 0;
+}
+	.bg {
+		background-image:  
+		height: 100%;
+
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+		</style>
+		<!-- Clickable button-->
+		<style>
+	.button {
+		background-color: #008CBA;
+		txtcolor: red;
+		padding: 15px 32px;
+		cursor: pointer;
+		}
+		</style>
+		<style>
+		{
+  .container {
+	width: 500px; 
+	height: 500px; 
+	border: 1px solid red; 
+	margin: 0;
+	position: relative;
+	}
+   .text {
+		color: yellow;
+	}
+		</style>
+
+	</head>
+	<body background='just.jpg'> 
+		<div class='bg'> </div>
+		<font color='black'>
+		<div>
+		<a href='MayoMan.html'><img class='logo-img' src='logo2.png' width='60' height='60' alt='align box' align='left'>
+		</a>
+		</div>
+		<ul class='nav'>
+			<li><a href='MayoMan.html'>Home page</a></li>
+			<li><a href='Game modes.html'>About game</a></li>
+			<li><a href='Download link.html'>Download link</a></li>
+			<li><a href='Speles autori.html'>Game makers</a></li>		
+			<li><a href='Some game screenshots.html'>Game screenshots</a></li>
+		</ul>		
+<div class='text'>		
+	<border align='right'>
+    <h1> What is this game and what is the game point?</h1>
+	<h2> This is game is about black friday - fighting for all in the shop.</h2>
+	<b> <p> Little story of the game - Man, who just woke up turned on television while eating breakfast, there he saw that during the day is going to be black friday sale.</p> </b>
+	<img src="logo.png" alt="GameLogo" style="float:center;width:200px;height:200px;">
+	<b> <p> The shop was realy big and the strangest thing was that the buyers were not as much as he imagined and that the store was demolished </p> </b> 
+
+	<br>
+	<h2 align='center'>Release date - 2019 1 May. </h2>
+	<button type='button' onclick='myFunction()'>Whats coming with next update?</button>
+	<p id='demo'></p>
+</div>	
+	<script>
+	function myFunction(){
+	var txt;
+	if (confirm('Press OK to see updates')) {
+	txt = 'Lot of crazy stuff...'; </font>
+	}
+	document.getElementById('demo').innerHTML = txt;
+	}
+	</script>
+	</border>
+</body>
+</html>	 
