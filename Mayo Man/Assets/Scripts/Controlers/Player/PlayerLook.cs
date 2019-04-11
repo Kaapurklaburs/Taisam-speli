@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PlayerLook : MonoBehaviour
 {
-
     Vector2 mouseLook;
     Vector2 smothV;
-    public static float sensativity = 1.0f;
+    public float sensativity = 1.0f;
     public float smothing = 2.0f;
+    public float Range;
+    public HingeJoint hj;
+    private bool hasGrabd = false;
+    public float DropForce;
 
     GameObject Player;
 
@@ -29,6 +32,41 @@ public class PlayerLook : MonoBehaviour
 
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         Player.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, Player.transform.up);
+
+        if (Input.GetButton("Fire1"))
+        {
+            if (hasGrabd)
+            {
+                //       Drop();
+            }
+            else
+            {
+                Grab();
+            }
+
+        }
     }
 
+    void Grab()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, Range))
+        {
+
+            Rigidbody rb = hit.transform.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+
+                hj.connectedAnchor = new Vector3(0f, 0f, 1.5f);
+                hj.connectedBody = rb;
+                hasGrabd = true;
+            }
+        }
+    }
+
+    void Drop()
+    {
+        hj.connectedBody = null;
+        hasGrabd = false;
+    }
 }
