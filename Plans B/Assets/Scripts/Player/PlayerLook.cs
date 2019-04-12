@@ -9,10 +9,10 @@ public class PlayerLook : MonoBehaviour
     public float sensativity = 1.0f;
     public float smothing = 2.0f;
     public float Range;
-    public HingeJoint hj;
     private bool hasGrabd = false;
     public float DropForce;
-
+    public Transform Vieta;
+    private Rigidbody rb;
     GameObject Player;
 
 
@@ -35,38 +35,32 @@ public class PlayerLook : MonoBehaviour
 
         if (Input.GetButton("Fire1"))
         {
-            if (hasGrabd)
+            if (!hasGrabd)
             {
-                //       Drop();
-            }
-            else
-            {
-                Grab();
+               RaycastHit hit;
+               if (Physics.Raycast(transform.position, transform.forward, out hit, Range))
+               {
+                    rb = hit.transform.GetComponent<Rigidbody>();
+                    Vieta.position = rb.position;
+                    rb.useGravity = false;
+                    hasGrabd = true;      
+                }
             }
 
         }
-    }
-
-    void Grab()
-    {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, Range))
+        if (Input.GetButton("Fire2"))
         {
-
-            Rigidbody rb = hit.transform.GetComponent<Rigidbody>();
-            if (rb != null)
-            {
-
-                hj.connectedAnchor = new Vector3(0f, 0f, 1.5f);
-                hj.connectedBody = rb;
-                hasGrabd = true;
-            }
+            hasGrabd = false;
+            rb.rotation = Player.transform.rotation;
+            rb.useGravity = true;
         }
-    }
 
-    void Drop()
-    {
-        hj.connectedBody = null;
-        hasGrabd = false;
+        if (hasGrabd)
+        {
+            rb.MovePosition(Vieta.position);
+            rb.rotation = Player.transform.rotation;
+        }
+
+
     }
 }

@@ -9,6 +9,8 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody rb;
     public float jumpForce;
     private bool hasJumped;
+    public CapsuleCollider col;
+    public float charakterH = 2f;
 
 
     void Start()
@@ -27,9 +29,11 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             rb.MovePosition(transform.position + (transform.forward * translation / 3f) + (transform.right * straffe / 3f));
+            col.height = charakterH * 0.6f;
         }
         else
         {
+            col.height = charakterH;
             rb.MovePosition(transform.position + (transform.forward * translation) + (transform.right * straffe));
 
             if (Input.GetKey("space"))
