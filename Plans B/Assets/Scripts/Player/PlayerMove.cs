@@ -9,8 +9,7 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody rb;
     public float jumpForce;
     private bool hasJumped;
-    public CapsuleCollider col;
-    public float charakterH = 2f;
+
 
 
     void Start()
@@ -19,8 +18,7 @@ public class PlayerMove : MonoBehaviour
         hasJumped = false;
     }
 
-
-    void FixedUpdate()
+    void Update()
     {
         float translation = Input.GetAxis("Vertical") * speed;
         float straffe = Input.GetAxis("Horizontal") * speed;
@@ -29,32 +27,26 @@ public class PlayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             rb.MovePosition(transform.position + (transform.forward * translation / 3f) + (transform.right * straffe / 3f));
-            col.height = charakterH * 0.6f;
         }
         else
         {
-            col.height = charakterH;
             rb.MovePosition(transform.position + (transform.forward * translation) + (transform.right * straffe));
 
-            if (Input.GetKey("space"))
+            if (Input.GetKey("space") && hasJumped == false)
             {
-                if (hasJumped)
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.01f))
                 {
-                    hasJumped = false;
-                }
-                else
-                {
-                    RaycastHit hit;
-                    if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.01f))
+                    if (hit.transform.position.y < transform.position.y)
                     {
-                        if (hit.transform.position.y < transform.position.y)
-                        {
-                            rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
-                            hasJumped = true;
-                        }
+                        rb.AddForce(0, jumpForce, 0, ForceMode.Impulse);
+                        hasJumped = true;
                     }
                 }
-
+            }
+            else
+            {
+                hasJumped = false;
             }
         }
 
