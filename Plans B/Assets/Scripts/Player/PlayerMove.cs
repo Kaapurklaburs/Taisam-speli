@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody rb;
     public float jumpForce;
     private bool hasJumped;
-    public PlayerStats ps;
+    public static float Damage = 0f;
 
 
 
@@ -50,11 +50,16 @@ public class PlayerMove : MonoBehaviour
                 hasJumped = false;
             }
         }
+        
         if (rb.velocity.y > 10f)
         {
-            PlayerStats.PlayerSts.Damage(0.01f);
+            Damage = 0.01f;
+        }   
+        else
+        {
+            Damage = 0.0f;
         }
-
+        
         //     if (Pause.IsPaused)
         //     {
         //         Cursor.lockState = CursorLockMode.None;

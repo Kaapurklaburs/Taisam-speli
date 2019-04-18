@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerStats : MonoBehaviour
+public class AllPlayerStats : MonoBehaviour
 {
+    //public PlayerMove Move;
+    private float DamageSum = 0f;
+
     [System.Serializable]
     public struct Stats
     {
@@ -18,7 +21,8 @@ public class PlayerStats : MonoBehaviour
         }
     }
     [SerializeField]
-    public static Stats PlayerSts;
+    public Stats PlayerStats;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +32,10 @@ public class PlayerStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        DamageSum = PlayerMove.Damage;
+        //Pieliks jaunus damagus kad ieliks skriptos
+
+        PlayerStats.Health -= DamageSum;
     }
     /*
     Stats Damage(Stats P, float D)
