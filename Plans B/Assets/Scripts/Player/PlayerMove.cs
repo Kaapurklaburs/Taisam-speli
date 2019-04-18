@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     public Rigidbody rb;
     public float jumpForce;
     private bool hasJumped;
+    public PlayerStats ps;
 
 
 
@@ -48,6 +49,10 @@ public class PlayerMove : MonoBehaviour
             {
                 hasJumped = false;
             }
+        }
+        if (rb.velocity.y > 10f)
+        {
+            PlayerStats.PlayerSts.Damage(0.01f);
         }
 
         //     if (Pause.IsPaused)
