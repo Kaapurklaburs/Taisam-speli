@@ -10,7 +10,11 @@ public class PlayerInteract : MonoBehaviour
     GameObject Player;
     public float GrabSpeed = 0.1f;
     public float Range = 1.5f;
-
+    [SerializeField]
+    public Structs.Item[] Bag;
+    public ItemInfo ITEM;
+    public GameObject ITEM_Go;
+    public int Hand = 0;
     void Start()
     {
         Player = this.transform.parent.gameObject;
@@ -38,11 +42,28 @@ public class PlayerInteract : MonoBehaviour
        }
        if (Input.GetButton("Fire2"))
        {
-            hasGrabd = false;
-            rb.rotation = Player.transform.rotation;
-            rb.useGravity = true;
-       }
+            if (hasGrabd)
+            {
+                rb.rotation = Player.transform.rotation;
+                hasGrabd = false;
+                rb.useGravity = true;
+            }
+            else
+            {
+                RaycastHit hit2;
+                if (Physics.Raycast(transform.position, transform.forward, out hit2, Range))
+                {
+                    ITEM = hit2.transform.GetComponent<ItemInfo>();
+                    ITEM_Go = hit2.transform.gameObject;
+                    if (ITEM != null && ITEM_Go != null)
+                    {
+                        Bag[Hand] = ITEM.Item;
+                        Destroy(ITEM_Go);
+                    }
 
+                }
+            }
+       }
        if (hasGrabd)
        {
             Vector3 SmothPosition = Vector3.Lerp(rb.position, Vieta.position, GrabSpeed);
