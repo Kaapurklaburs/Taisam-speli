@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public float jumpForce;
     private bool hasJumped;
     public static float Damage = 0f;
+    public float velocity;
 
 
 
@@ -21,6 +22,8 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        velocity = rb.velocity.y;
+
         float translation = Input.GetAxis("Vertical") * speed;
         float straffe = Input.GetAxis("Horizontal") * speed;
         translation *= Time.deltaTime;
@@ -51,9 +54,17 @@ public class PlayerMove : MonoBehaviour
             }
         }
         
-        if (rb.velocity.y > 10f)
+        if (rb.velocity.y < -9.9f)
         {
-            Damage = 0.01f;
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, 1.1f))
+            {
+                if (hit.transform.position.y < transform.position.y)
+                {
+                    Damage = -velocity * 2f;
+                }
+            }
+           
         }   
         else
         {

@@ -23,13 +23,11 @@ public class AllPlayerStats : MonoBehaviour
     [SerializeField]
     public Stats PlayerStats;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         DamageSum = PlayerMove.Damage;
@@ -37,11 +35,5 @@ public class AllPlayerStats : MonoBehaviour
 
         PlayerStats.Health -= DamageSum;
     }
-    /*
-    Stats Damage(Stats P, float D)
-    {
-        P.Health -= D;
-        return P;
-    }
-    */
+
 }
