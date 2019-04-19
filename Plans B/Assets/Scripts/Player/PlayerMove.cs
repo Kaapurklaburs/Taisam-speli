@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        velocity = rb.velocity.y;
+        //velocity = rb.velocity.y;
 
         float translation = Input.GetAxis("Vertical") * speed;
         float straffe = Input.GetAxis("Horizontal") * speed;
@@ -55,7 +55,7 @@ public class PlayerMove : MonoBehaviour
         
         if (rb.velocity.y-LastVelocity > 10f)
         {
-            Damage = 2f*(rb.velocity.y - LastVelocity);
+            Damage = 2f*( rb.velocity.y - LastVelocity);
         }   
         else
         {
