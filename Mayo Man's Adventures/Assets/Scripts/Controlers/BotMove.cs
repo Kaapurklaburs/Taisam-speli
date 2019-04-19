@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class BotMove : MonoBehaviour {
 
     public float Range = 10f;
-    Transform target;
+    public Transform target;
     public Rigidbody Me;
     public float delay = 3f;
     public GameObject Granade;

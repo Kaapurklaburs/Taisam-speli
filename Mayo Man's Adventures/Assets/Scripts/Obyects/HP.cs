@@ -44,12 +44,12 @@ public class HP : MonoBehaviour {
             else
             {
                 Debug.Log("+ 1 kill");
-                Die();
+                //Die();
             }
            
         }
     }
-
+    /*
     void Die()
     {
         Debug.Log("+ 1 kill");
@@ -57,4 +57,5 @@ public class HP : MonoBehaviour {
         Money.kills += 1;
         Destroy(gameObject);
      }
+     */
 }
