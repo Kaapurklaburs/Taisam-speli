@@ -895,7 +895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerStats:
-    Health: 1
+    Health: 100
 --- !u!1001 &410034082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2112,27 +2112,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fb85c67298e0114f85c7ff0e778bd83, type: 3}
---- !u!1 &1034915147 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7299724178203449349, guid: 7fb85c67298e0114f85c7ff0e778bd83,
-    type: 3}
-  m_PrefabInstance: {fileID: 3123959146892056405}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1034915153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034915147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d84105cc239d9fd4798db4fd33818716, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Item:
-    Name: Box
-    amount: 1
 --- !u!1001 &1068372798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4731,7 +4710,7 @@ PrefabInstance:
     - target: {fileID: 2815946758843206238, guid: 134ab6351168a5e4db8084746c4bdec9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.09
+      value: 31.112
       objectReference: {fileID: 0}
     - target: {fileID: 2815946758843206238, guid: 134ab6351168a5e4db8084746c4bdec9,
         type: 3}

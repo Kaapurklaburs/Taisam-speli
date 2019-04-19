@@ -10,7 +10,7 @@ public class PlayerMove : MonoBehaviour
     public float jumpForce;
     private bool hasJumped;
     public static float Damage = 0f;
-
+    public float LastVelocity = 0f;
 
 
     void Start()
@@ -51,15 +51,15 @@ public class PlayerMove : MonoBehaviour
             }
         }
         
-        if (rb.velocity.y > 10f)
+        if (rb.velocity.y-LastVelocity > 10f)
         {
-            Damage = 0.01f;
+            Damage = 2f*(rb.velocity.y - LastVelocity);
         }   
         else
         {
             Damage = 0.0f;
         }
-        
+        LastVelocity = rb.velocity.y;
         //     if (Pause.IsPaused)
         //     {
         //         Cursor.lockState = CursorLockMode.None;
