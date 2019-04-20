@@ -6,17 +6,29 @@ public class ItemContainer : MonoBehaviour
 {
 
 
-    public Structs.Item[] ITEMS; 
+    public static Dictionary<Structs.Item, int> Contents = new Dictionary<Structs.Item, int>();
+    public static float MaxVollume;
+    public static float Vollume;
 
-    // Start is called before the first frame update
-    void Start()
+    public static Dictionary<Structs.Item, int> AddItem(Dictionary<Structs.Item, int> Cont , Structs.Item item)
     {
         
+        foreach (var key in Cont)
+        {
+            Vollume += key.Value;
+        }
+        if (Vollume + item.amount < MaxVollume)
+        {
+            if (Cont.ContainsKey(item))
+            {
+                Cont[item]++;
+            }
+            else
+            {
+                Cont.Add(item, 1);
+            }
+        }
+        return Cont;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

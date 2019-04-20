@@ -11,10 +11,10 @@ public class PlayerInteract : MonoBehaviour
     public float GrabSpeed = 0.1f;
     public float Range = 1.5f;
     [SerializeField]
-    public Structs.Item[] Bag;
+    //public Structs.Item[] Bag;
     public ItemInfo ITEM;
     public GameObject ITEM_Go;
-    public int Hand = 0;
+    public Structs.Item Hand;
     void Start()
     {
         Player = this.transform.parent.gameObject;
@@ -57,7 +57,7 @@ public class PlayerInteract : MonoBehaviour
                     ITEM_Go = hit2.transform.gameObject;
                     if (ITEM != null && ITEM_Go != null)
                     {
-                        Bag[Hand] = ITEM.Item;
+                        ItemContainer.AddItem(ItemContainer.Contents, ITEM.Item);
                         Destroy(ITEM_Go);
                     }
 
