@@ -58,7 +58,7 @@ public class PlayerInteract : MonoBehaviour
                     if (ITEM != null && ITEM_Go != null)
                     {
                         ItemContainer.AddItem(ItemContainer.Contents, ITEM.Item);
-                        Destroy(ITEM_Go);
+                        ITEM_Go.SetActive(false);
                     }
 
                 }
