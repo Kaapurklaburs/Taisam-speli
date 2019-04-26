@@ -8,7 +8,6 @@ public class Structs : MonoBehaviour
     public struct Stats
     {
         public float Health;
-        public int ammo;
         public Stats(float Health)
         {
             this.Health = Health;
