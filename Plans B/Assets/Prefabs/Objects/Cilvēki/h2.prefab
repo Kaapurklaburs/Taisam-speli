@@ -405,7 +405,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 97c21d4d61d97c14cbb95385b9c47884, type: 3}
+  - {fileID: 2100000, guid: a27bccd2595d86d49833752976e87554, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -627,8 +627,8 @@ ConstantForce:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9024666977163897769}
-  m_Enabled: 0
-  m_Force: {x: 0, y: 90, z: 0}
+  m_Enabled: 1
+  m_Force: {x: 0, y: 95, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
@@ -992,9 +992,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.06
-  m_Height: 0.5
+  m_Height: 0.4
   m_Direction: 0
-  m_Center: {x: -0.12, y: 0, z: 0}
+  m_Center: {x: -0.15, y: 0, z: 0}
 --- !u!54 &1745854453817445549
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1020,7 +1020,7 @@ ConfigurableJoint:
   m_GameObject: {fileID: 9024666977163897783}
   m_ConnectedBody: {fileID: 6203763684981552889}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 1}
+  m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.04390664, y: 0.08159256, z: -0.007997513}
   serializedVersion: 2
@@ -1053,7 +1053,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_AngularYLimit:
-    limit: 45
+    limit: 60
     bounciness: 0
     contactDistance: 0
   m_AngularZLimit:
@@ -1150,9 +1150,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.06
-  m_Height: 0.5
+  m_Height: 0.4
   m_Direction: 0
-  m_Center: {x: -0.12, y: 0, z: 0}
+  m_Center: {x: -0.15, y: 0, z: 0}
 --- !u!54 &7088728646085155531
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1178,7 +1178,7 @@ ConfigurableJoint:
   m_GameObject: {fileID: 9024666977163897785}
   m_ConnectedBody: {fileID: 6203763684981552889}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 1}
+  m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: 0.043717384, y: -0.057999622, z: -0.00799942}
   serializedVersion: 2
@@ -1211,7 +1211,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_AngularYLimit:
-    limit: 45
+    limit: 60
     bounciness: 0
     contactDistance: 0
   m_AngularZLimit:
@@ -1309,7 +1309,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.05
-  m_Height: 0.45
+  m_Height: 0.42
   m_Direction: 0
   m_Center: {x: -0.25, y: 0, z: 0}
 --- !u!54 &1696325634277340949
@@ -1350,11 +1350,11 @@ ConfigurableJoint:
   m_GameObject: {fileID: 9024666977163897787}
   m_ConnectedBody: {fileID: 1745854453817445549}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 1.88}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: -0.35673416, y: 0.000723958, z: 0.0065587386}
   serializedVersion: 2
-  m_SecondaryAxis: {x: 0, y: 0, z: 0}
+  m_SecondaryAxis: {x: 0, y: -1, z: 0}
   m_XMotion: 1
   m_YMotion: 1
   m_ZMotion: 1
@@ -1372,11 +1372,11 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: -45
+    limit: -15
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
-    limit: 30
+    limit: 15
     bounciness: 0
     contactDistance: 0
   m_AngularYZLimitSpring:
@@ -1481,7 +1481,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.05
-  m_Height: 0.45
+  m_Height: 0.42
   m_Direction: 0
   m_Center: {x: -0.25, y: 0, z: 0}
 --- !u!54 &3117052792870870222
@@ -1522,11 +1522,11 @@ ConfigurableJoint:
   m_GameObject: {fileID: 9024666977163897789}
   m_ConnectedBody: {fileID: 7088728646085155531}
   m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 1, y: 0, z: 0}
+  m_Axis: {x: 1, y: 0, z: 1.88}
   m_AutoConfigureConnectedAnchor: 1
   m_ConnectedAnchor: {x: -0.35302773, y: -0.0048041344, z: 0.018500783}
   serializedVersion: 2
-  m_SecondaryAxis: {x: 0, y: 0, z: 0}
+  m_SecondaryAxis: {x: 0, y: -1, z: 0}
   m_XMotion: 1
   m_YMotion: 1
   m_ZMotion: 1
@@ -1544,11 +1544,11 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: -30
+    limit: -15
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
-    limit: 45
+    limit: 15
     bounciness: 0
     contactDistance: 0
   m_AngularYZLimitSpring:
@@ -1756,14 +1756,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9079012552868352128, guid: bd1d25030266fbd479c43d7415cd0961,
         type: 3}
-      propertyPath: m_LocalScale.z
+      propertyPath: m_LocalScale.x
       value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 9079012552868352128, guid: bd1d25030266fbd479c43d7415cd0961,
         type: 3}
-      propertyPath: m_LocalScale.x
+      propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 9079012552870122084, guid: bd1d25030266fbd479c43d7415cd0961,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 715f6b30a45f06d46ac6732e843e1c98, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd1d25030266fbd479c43d7415cd0961, type: 3}
 --- !u!4 &2342316858156051219 stripped
@@ -1841,14 +1846,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9079012552868352128, guid: bd1d25030266fbd479c43d7415cd0961,
         type: 3}
-      propertyPath: m_LocalScale.z
+      propertyPath: m_LocalScale.x
       value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 9079012552868352128, guid: bd1d25030266fbd479c43d7415cd0961,
         type: 3}
-      propertyPath: m_LocalScale.x
+      propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 9079012552870122084, guid: bd1d25030266fbd479c43d7415cd0961,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 715f6b30a45f06d46ac6732e843e1c98, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd1d25030266fbd479c43d7415cd0961, type: 3}
 --- !u!4 &343589527054804506 stripped

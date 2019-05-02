@@ -8,13 +8,17 @@ public class PlayerInteract : MonoBehaviour
     public Transform Vieta;
     private Rigidbody rb;
     GameObject Player;
+    public float takeTime;
+    private float countDown;
     public float GrabSpeed = 0.1f;
     public float Range = 1.5f;
+    public float dropForce;
     [SerializeField]
     //public Structs.Item[] Bag;
     public ItemInfo ITEM;
     public GameObject ITEM_Go;
     public Structs.Item Hand;
+
     void Start()
     {
         Player = this.transform.parent.gameObject;
@@ -22,7 +26,9 @@ public class PlayerInteract : MonoBehaviour
 
     private void FixedUpdate()
     {
-       if (Input.GetButton("Fire1"))
+
+
+       if (Input.GetButtonDown("Fire1"))
        {
           if (!hasGrabd)
           {
@@ -38,9 +44,18 @@ public class PlayerInteract : MonoBehaviour
                   }
      
               }
-          }
+            }
+            else
+            {
+                rb.rotation = Player.transform.rotation;
+                hasGrabd = false;
+                rb.useGravity = true;
+                rb.AddForce(transform.forward * dropForce, ForceMode.Impulse);
+            }
+
+  
        }
-       if (Input.GetButton("Fire2"))
+       if (Input.GetButtonDown("Fire2"))
        {
             if (hasGrabd)
             {
@@ -69,6 +84,7 @@ public class PlayerInteract : MonoBehaviour
             Vector3 SmothPosition = Vector3.Lerp(rb.position, Vieta.position, GrabSpeed);
             rb.position = SmothPosition;
             rb.rotation = Player.transform.rotation;
+
        }
     }
 }
