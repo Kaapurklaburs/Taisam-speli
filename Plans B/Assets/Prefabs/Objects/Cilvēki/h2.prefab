@@ -627,7 +627,7 @@ ConstantForce:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9024666977163897769}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Force: {x: 0, y: 95, z: 0}
   m_RelativeForce: {x: 0, y: 0, z: 0}
   m_Torque: {x: 0, y: 0, z: 0}
@@ -1694,11 +1694,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9024666977163736991}
     m_Modifications:
-    - target: {fileID: 9079012552867859616, guid: bd1d25030266fbd479c43d7415cd0961,
-        type: 3}
-      propertyPath: m_Name
-      value: eye (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 9079012552868352128, guid: bd1d25030266fbd479c43d7415cd0961,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1764,6 +1759,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 9079012552867859616, guid: bd1d25030266fbd479c43d7415cd0961,
+        type: 3}
+      propertyPath: m_Name
+      value: eye (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 9079012552870122084, guid: bd1d25030266fbd479c43d7415cd0961,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1784,11 +1784,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9024666977163736991}
     m_Modifications:
-    - target: {fileID: 9079012552867859616, guid: bd1d25030266fbd479c43d7415cd0961,
-        type: 3}
-      propertyPath: m_Name
-      value: eye (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 9079012552868352128, guid: bd1d25030266fbd479c43d7415cd0961,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1853,6 +1848,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 9079012552867859616, guid: bd1d25030266fbd479c43d7415cd0961,
+        type: 3}
+      propertyPath: m_Name
+      value: eye (1)
       objectReference: {fileID: 0}
     - target: {fileID: 9079012552870122084, guid: bd1d25030266fbd479c43d7415cd0961,
         type: 3}

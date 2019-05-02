@@ -8,8 +8,6 @@ public class PlayerInteract : MonoBehaviour
     public Transform Vieta;
     private Rigidbody rb;
     GameObject Player;
-    public float takeTime;
-    private float countDown;
     public float GrabSpeed = 0.1f;
     public float Range = 1.5f;
     public float dropForce;
@@ -36,7 +34,9 @@ public class PlayerInteract : MonoBehaviour
               if (Physics.Raycast(transform.position, transform.forward, out hit, Range))
               {
                   rb = hit.transform.GetComponent<Rigidbody>();
-                  if(rb != null)
+                    ItemInfo it = hit.transform.GetComponent<ItemInfo>();
+                    Transform tr = GetP
+                  if(rb != null && it != null)
                   {
                       Vieta.position = rb.position;
                       rb.useGravity = false;
