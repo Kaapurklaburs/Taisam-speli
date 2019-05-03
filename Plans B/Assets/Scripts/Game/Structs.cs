@@ -23,5 +23,6 @@ public class Structs : MonoBehaviour
         public string Name;
         public int amount;
         public float volume;
+        public int r, g, b;
     }
 }

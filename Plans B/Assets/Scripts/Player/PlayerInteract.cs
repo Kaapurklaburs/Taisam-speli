@@ -12,7 +12,7 @@ public class PlayerInteract : MonoBehaviour
     public float Range = 1.5f;
     public float dropForce;
     [SerializeField]
-    //public Structs.Item[] Bag;
+    
     public ItemInfo ITEM;
     public GameObject ITEM_Go;
     public Structs.Item Hand;
@@ -35,7 +35,6 @@ public class PlayerInteract : MonoBehaviour
               {
                   rb = hit.transform.GetComponent<Rigidbody>();
                     ItemInfo it = hit.transform.GetComponent<ItemInfo>();
-                    Transform tr = GetP
                   if(rb != null && it != null)
                   {
                       Vieta.position = rb.position;
