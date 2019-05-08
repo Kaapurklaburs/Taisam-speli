@@ -22,7 +22,14 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         //velocity = rb.velocity.y;
-
+        if (Input.GetKey("r"))
+        {
+            speed = 7f;
+        }
+        else
+        {
+            speed = 5f;
+        }
         float translation = Input.GetAxis("Vertical") * speed;
         float straffe = Input.GetAxis("Horizontal") * speed;
         translation *= Time.deltaTime;
@@ -31,7 +38,7 @@ public class PlayerMove : MonoBehaviour
         {
             rb.MovePosition(transform.position + (transform.forward * translation / 3f) + (transform.right * straffe / 3f));
         }
-        else
+        else //if(Input.G)
         {
             rb.MovePosition(transform.position + (transform.forward * translation) + (transform.right * straffe));
 
