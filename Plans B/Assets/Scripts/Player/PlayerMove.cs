@@ -4,32 +4,48 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour
 {
-
-    public float speed = 5f;
+    Animator anime;
+    public float WalkSeed;
+    private float speed = 5f;
+    public float RunSpeed;
     public Rigidbody rb;
     public float jumpForce;
+    private float Aspeed;
     private bool hasJumped;
     public static float Damage = 0f;
     public float LastVelocity = 0f;
+    private float velocity;
 
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         hasJumped = false;
+        anime = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
-        //velocity = rb.velocity.y;
+        velocity = rb.velocity.magnitude;
         if (Input.GetKey("r"))
         {
-            speed = 7f;
+            speed = RunSpeed;
+            Aspeed = 1f;
         }
         else
         {
-            speed = 5f;
+            speed = WalkSeed;
+            if (velocity <= 0f)
+            {
+                Aspeed = 0f;
+            }
+            else
+            {
+                Aspeed = 0.5f;
+            }
+            
         }
+        anime.SetFloat("MuSpeed", Aspeed, 0.1f, Time.deltaTime);
         float translation = Input.GetAxis("Vertical") * speed;
         float straffe = Input.GetAxis("Horizontal") * speed;
         translation *= Time.deltaTime;
