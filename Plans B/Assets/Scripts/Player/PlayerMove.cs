@@ -26,36 +26,14 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-        velocity = rb.velocity.magnitude;
-        if (Input.GetKey("r"))
-        {
-            speed = RunSpeed;
-            Aspeed = 1f;
-        }
-        else
-        {
-            speed = WalkSeed;
-            if (velocity <= 0f)
-            {
-                Aspeed = 0f;
-            }
-            else
-            {
-                Aspeed = 0.5f;
-            }
-            
-        }
+
         anime.SetFloat("MuSpeed", Aspeed, 0.1f, Time.deltaTime);
         float translation = Input.GetAxis("Vertical") * speed;
         float straffe = Input.GetAxis("Horizontal") * speed;
         translation *= Time.deltaTime;
         straffe *= Time.deltaTime;
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            rb.MovePosition(transform.position + (transform.forward * translation / 3f) + (transform.right * straffe / 3f));
-        }
-        else //if(Input.G)
-        {
+
+
             rb.MovePosition(transform.position + (transform.forward * translation) + (transform.right * straffe));
 
             if (Input.GetKey("space") && hasJumped == false)
@@ -74,7 +52,7 @@ public class PlayerMove : MonoBehaviour
             {
                 hasJumped = false;
             }
-        }
+        
         
         if (rb.velocity.y-LastVelocity > 10f)
         {
@@ -94,5 +72,24 @@ public class PlayerMove : MonoBehaviour
         //         Cursor.lockState = CursorLockMode.Locked;
         //      }
         //  }
+
+        velocity = rb.velocity.magnitude;
+        if (Input.GetKey("r"))
+        {
+            speed = RunSpeed;
+            Aspeed = translation * 10f;
+        }
+        else
+        {
+            Aspeed = translation * speed;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = WalkSeed / 3f;
+            }
+            else
+            {
+                speed = WalkSeed;
+            }
+        }
     }
 }
