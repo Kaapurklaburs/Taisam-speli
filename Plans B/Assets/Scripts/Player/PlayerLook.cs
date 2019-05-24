@@ -9,7 +9,9 @@ public class PlayerLook : MonoBehaviour
     public float sensativity = 1.0f;
     public float smothing = 2.0f;
     GameObject Player;
-
+    public Transform Head;
+    public float Offset;
+    public float height;
 
 
 
@@ -31,6 +33,8 @@ public class PlayerLook : MonoBehaviour
         transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
         Player.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, Player.transform.up);
 
+        Vector3 Heh = new Vector3(0f, height, 0f);
+        transform.position = Head.forward * Offset + Head.position + Heh;
        
 
     }
