@@ -12,7 +12,6 @@ public class PlayerInteract : MonoBehaviour
     public float Range = 1.5f;
     public float dropForce;
     [SerializeField]
-    
     public ItemInfo ITEM;
     public GameObject ITEM_Go;
     public Structs.Item Hand;
@@ -30,27 +29,40 @@ public class PlayerInteract : MonoBehaviour
        {
           if (!hasGrabd)
           {
-              RaycastHit hit;
-              if (Physics.Raycast(transform.position, transform.forward, out hit, Range))
-              {
-                  rb = hit.transform.GetComponent<Rigidbody>();
-                    ItemInfo it = hit.transform.GetComponent<ItemInfo>();
-                  if(rb != null && it != null)
-                  {
-                      Vieta.position = rb.position;
-                      rb.useGravity = false;
-                      hasGrabd = true; 
-                  }
-     
-              }
-            }
-            else
-            {
-                rb.rotation = Player.transform.rotation;
-                hasGrabd = false;
-                rb.useGravity = true;
-                rb.AddForce(transform.forward * dropForce, ForceMode.Impulse);
-            }
+
+                    RaycastHit hit;
+                    if (Physics.Raycast(transform.position, transform.forward, out hit, Range))
+                    {
+                         rb = hit.transform.GetComponent<Rigidbody>();
+                         ITEM = hit.transform.GetComponent<ItemInfo>();
+                         if(rb != null && ITEM != null)
+                         {
+                              Vieta.position = rb.position;
+                              rb.useGravity = false;
+                              hasGrabd = true; 
+                         }
+      
+                    }
+               
+                
+
+          }
+          else
+          {
+                if (ITEM.usable == true)
+                {
+                    ITEM.Use();
+                }
+                else
+                {
+
+                    rb.rotation = Player.transform.rotation;
+                    hasGrabd = false;
+                    rb.useGravity = true;
+                    rb.AddForce(transform.forward * dropForce, ForceMode.Impulse);
+                }
+
+          }
 
   
        }
