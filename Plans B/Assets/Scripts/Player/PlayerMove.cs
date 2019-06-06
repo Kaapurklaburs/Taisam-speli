@@ -81,7 +81,7 @@ public class PlayerMove : MonoBehaviour
         }
         else
         {
-            Aspeed = translation * 6f;
+            Aspeed = translation * 9.5f;
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 speed = WalkSeed / 3f;
