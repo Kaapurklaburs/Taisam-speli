@@ -11,7 +11,6 @@ public class ItemInfo : MonoBehaviour
     public float force;
     public bool usable;
     public Transform P;
-    public GameObject expl;
 
     public void Use()
     {
@@ -23,7 +22,6 @@ public class ItemInfo : MonoBehaviour
 
     void Shote()
     {
-        Instantiate(expl, P.position, P.rotation);
 
         GameObject bullet = Instantiate(Bullet, P.position, P.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
